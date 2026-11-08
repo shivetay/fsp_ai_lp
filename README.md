@@ -13,7 +13,7 @@ npm run dev
 ## Treść
 
 Cała treść (usługi, proces, realizacje, stack, FAQ, dane firmy) jest w `src/content/site.ts`.
-Uzupełnij dane firmy w stopce (`site.company`) i podmień przykładowe realizacje na prawdziwe.
+Podmień przykładowe realizacje na prawdziwe.
 
 ## Formularz kontaktowy
 

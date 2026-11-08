@@ -9,10 +9,9 @@ export const site = {
   email: "kontakt@fsplukaszdawidowicz.pl",
   linkedin: "https://www.linkedin.com/in/%C5%82ukasz-dawidowicz-698a59b6/",
   github: "https://github.com/shivetay",
-  // Dane firmy do stopki: uzupełnij prawdziwymi wartościami.
   company: {
     legalName: "FSP Łukasz Dawidowicz",
-    lines: ["NIP: 0000000000", "REGON: 000000000"],
+    lines: ["NIP: 6922391957", "REGON: 52477552800000"],
   },
 };
 
