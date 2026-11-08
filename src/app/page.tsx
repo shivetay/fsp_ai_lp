@@ -10,10 +10,12 @@ import { DemoSection } from "@/components/demo-section";
 import { Faq } from "@/components/faq";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { StructuredData } from "@/components/structured-data";
 
 export default function Home() {
   return (
     <>
+      <StructuredData />
       <Header />
       <main>
         <Hero />

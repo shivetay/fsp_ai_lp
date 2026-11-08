@@ -45,3 +45,12 @@ Po deployu włącz je w panelu Vercel: projekt → **Analytics** → **Enable**.
 ## Dokumentacja procesów
 
 Opisy przykładowych automatyzacji są w `docs/procesy/` (np. `leady-do-crm.md`).
+
+## SEO
+
+- Meta tagi, canonical, Open Graph i Twitter: `src/app/layout.tsx`, teksty w `src/lib/seo.ts`.
+- Dane strukturalne JSON-LD (WebSite, Person, ProfessionalService z usługami, FAQPage): `src/components/structured-data.tsx`.
+- `sitemap.xml`, `robots.txt`, `manifest.webmanifest`, ikona i obrazek OG generowane przez Next.js (`src/app/`).
+- Ustaw `NEXT_PUBLIC_SITE_URL` na docelową domenę. Po deployu dodaj stronę do Google Search Console,
+  zweryfikuj ją (`NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`) i zgłoś `sitemap.xml`.
+- Uzupełnij `location` w `src/content/site.ts`: miasto/region wzmacnia lokalne SEO i trafia do danych strukturalnych.

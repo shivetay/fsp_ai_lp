@@ -3,11 +3,41 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { Analytics } from "@vercel/analytics/next";
 import { site } from "@/content/site";
+import { seo, siteUrl } from "@/lib/seo";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: `${site.brand} ${site.name} | AI i automatyzacje`,
-  description: site.tagline,
+  metadataBase: new URL(siteUrl),
+  title: { default: seo.title, template: `%s | ${site.brand} ${site.name}` },
+  description: seo.description,
+  keywords: seo.keywords,
+  authors: [{ name: site.name, url: siteUrl }],
+  creator: site.name,
+  publisher: site.company.legalName,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: seo.locale,
+    url: "/",
+    siteName: `${site.brand} ${site.name}`,
+    title: seo.shortTitle,
+    description: seo.description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: seo.shortTitle,
+    description: seo.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  },
+  formatDetection: { telephone: false },
+  // Weryfikacja w Google Search Console: ustaw NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION.
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export const viewport: Viewport = {
