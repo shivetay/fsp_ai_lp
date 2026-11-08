@@ -116,28 +116,29 @@ export const industries = [
 export const workSteps = [
   {
     step: "01",
-    title: "Bezpłatna rozmowa",
-    text: "30 minut online lub na miejscu. Opowiadasz, jak wygląda Twój dzień i co zabiera najwięcej czasu.",
+    title: "Bezpłatna konsultacja",
+    text: "Rozmawiamy o Twojej firmie i potrzebach. Zbieram informacje o tym, jak dziś pracujecie, i szukam miejsc, w których AI sprawdzi się najlepiej. Bez opłat i bez zobowiązań.",
+    free: true,
   },
   {
     step: "02",
-    title: "Analiza i wycena",
-    text: "Wybieram 1 do 3 procesów z największym zyskiem. Dostajesz plan, stałą cenę i termin, razem z wyliczeniem ROI.",
+    title: "Analiza procesów",
+    text: "Robię pełny przegląd procesów w firmie: kto, co i jak często robi ręcznie. Wskazuję, co warto zautomatyzować najpierw i ile to da, razem z wyliczeniem ROI.",
   },
   {
     step: "03",
-    title: "Prototyp",
-    text: "W kilka dni pokazuję działające rozwiązanie na Twoich danych. Testujesz, zanim cokolwiek zmienisz w firmie.",
+    title: "Projekt i pokaz rozwiązania",
+    text: "Projektuję automatyzację i pokazuję działający prototyp na Twoich danych. Widzisz efekt, zanim zdecydujesz o wdrożeniu. Dostajesz stałą cenę i termin.",
   },
   {
     step: "04",
-    title: "Wdrożenie i szkolenie",
-    text: "Podłączam automat do Twoich narzędzi, testuję i uczę zespół obsługi. Dostajesz prostą instrukcję.",
+    title: "Wdrożenie",
+    text: "Podłączam rozwiązanie do Twoich narzędzi, testuję je w codziennej pracy i szkolę zespół. Dostajesz prostą instrukcję obsługi.",
   },
   {
     step: "05",
-    title: "Opieka i rozwój",
-    text: "Pilnuję, żeby wszystko działało. Gdy firma rośnie, dokładamy kolejne automaty.",
+    title: "Wsparcie i optymalizacja",
+    text: "Monitoruję działanie, poprawiam to, co wymaga dopracowania, i rozwijam automaty razem z firmą. Regularnie sprawdzamy, ile czasu realnie oszczędzacie.",
   },
 ];
 
