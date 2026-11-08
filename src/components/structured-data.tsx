@@ -35,7 +35,12 @@ export function StructuredData() {
       ...(nip && { taxID: nip, vatID: `PL${nip}` }),
       ...(site.email && { email: site.email }),
       ...(site.phone && { telephone: site.phone }),
-      areaServed: site.location ? [site.location, "Polska"] : "Polska",
+      address: { "@type": "PostalAddress", addressLocality: site.city, addressRegion: "dolnośląskie", addressCountry: "PL" },
+      areaServed: [
+        { "@type": "City", name: site.city },
+        { "@type": "AdministrativeArea", name: site.region },
+        { "@type": "Country", name: "Polska" },
+      ],
       priceRange: "$$",
       sameAs,
       knowsAbout: industries.map((i) => i.name),

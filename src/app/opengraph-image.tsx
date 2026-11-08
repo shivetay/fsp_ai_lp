@@ -28,7 +28,7 @@ export default async function OgImage() {
             AI i automatyzacje dla małych, lokalnych firm
           </div>
           <div style={{ fontSize: 32, color: "#a3a3a3" }}>
-            Bezpłatna konsultacja · Kalkulator ROI · Wdrożenie i wsparcie
+            Wrocław i Dolny Śląsk · Bezpłatna konsultacja · Kalkulator ROI
           </div>
         </div>
       </div>

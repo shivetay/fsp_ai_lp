@@ -4,10 +4,10 @@ import { site } from "@/content/site";
 export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.fsplukaszdawidowicz.pl").replace(/\/$/, "");
 
 export const seo = {
-  title: "Wdrożenia AI i automatyzacja procesów dla małych firm | FSP Łukasz Dawidowicz",
-  shortTitle: "Wdrożenia AI i automatyzacje dla małych firm",
+  title: "Wdrożenia AI i automatyzacja procesów dla małych firm | Wrocław, Dolny Śląsk",
+  shortTitle: "Wdrożenia AI i automatyzacje dla małych firm z Wrocławia",
   description:
-    "Wdrażam sztuczną inteligencję i automatyzuję procesy w małych, lokalnych firmach: chatboty AI, obsługa zapytań, rezerwacje, faktury, oferty. Bezpłatna konsultacja i kalkulator ROI.",
+    "Wdrażam sztuczną inteligencję i automatyzuję procesy w małych firmach z Wrocławia i Dolnego Śląska: chatboty AI, obsługa zapytań, rezerwacje, faktury, oferty. Bezpłatna konsultacja i kalkulator ROI.",
   keywords: [
     "wdrożenie AI",
     "wdrożenia sztucznej inteligencji",
@@ -20,6 +20,10 @@ export const seo = {
     "automatyzacja Make Zapier",
     "konsultant AI",
     "kalkulator ROI automatyzacji",
+    "wdrożenie AI Wrocław",
+    "automatyzacja procesów Wrocław",
+    "AI dla firm Dolny Śląsk",
+    "konsultant AI Wrocław",
     site.name,
   ],
   locale: "pl_PL",

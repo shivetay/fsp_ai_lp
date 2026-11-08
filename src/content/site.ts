@@ -5,11 +5,13 @@ export const site = {
   name: "Łukasz Dawidowicz",
   role: "Wdrożenia AI i automatyzacja procesów dla małych firm",
   tagline:
-    "Pomagam lokalnym firmom wejść w świat AI bez ryzyka i bez żargonu. Automatyzuję powtarzalną pracę, żeby Ty i Twój zespół mieli czas na klientów.",
+    "Pomagam lokalnym firmom z Wrocławia i Dolnego Śląska wejść w świat AI bez ryzyka i bez żargonu. Automatyzuję powtarzalną pracę, żeby Ty i Twój zespół mieli czas na klientów.",
   // Dane kontaktowe: puste pole = element się nie wyświetla.
   email: "", // np. "kontakt@twojadomena.pl"
   phone: "", // np. "+48 600 000 000"
-  location: "", // np. "Warszawa i okolice, zdalnie w całej Polsce"
+  location: "Wrocław i Dolny Śląsk, zdalnie w całej Polsce",
+  city: "Wrocław",
+  region: "Dolny Śląsk",
   linkedin: "https://www.linkedin.com/in/%C5%82ukasz-dawidowicz-698a59b6/",
   github: "https://github.com/shivetay",
   company: {
@@ -125,7 +127,7 @@ export const workSteps = [
   {
     step: "01",
     title: "Bezpłatna konsultacja",
-    text: "Rozmawiamy o Twojej firmie i potrzebach. Zbieram informacje o tym, jak dziś pracujecie, i szukam miejsc, w których AI sprawdzi się najlepiej. Bez opłat i bez zobowiązań.",
+    text: "Rozmawiamy online albo spotykamy się na miejscu we Wrocławiu lub na Dolnym Śląsku. Zbieram informacje o tym, jak dziś pracujecie, i szukam miejsc, w których AI sprawdzi się najlepiej. Bez opłat i bez zobowiązań.",
     free: true,
   },
   {

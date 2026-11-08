@@ -7,7 +7,7 @@ export function Industries() {
       <SectionHeading
         eyebrow="Branże"
         title="Dla kogo pracuję"
-        lead="Lokalne małe firmy, które chcą wejść w świat AI, ale nie mają własnego działu IT. Kilka przykładów:"
+        lead="Lokalne małe firmy z Wrocławia i Dolnego Śląska, które chcą wejść w świat AI, ale nie mają własnego działu IT. Kilka przykładów:"
       />
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {industries.map((i) => (

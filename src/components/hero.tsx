@@ -8,7 +8,7 @@ export function Hero() {
       <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-24 sm:px-6 sm:pt-32">
         <div className="fade-up max-w-3xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> {site.brand} {site.name}
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> {site.brand} {site.name} · {site.city}
           </span>
           <h1 className="mt-8 text-4xl font-semibold tracking-tight sm:text-6xl">
             AI i automatyzacje dla małych, lokalnych firm
