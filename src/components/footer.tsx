@@ -16,6 +16,7 @@ export function Footer() {
             <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">LinkedIn</a>
             <a href={site.github} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">GitHub</a>
           </div>
+          <a href="/polityka-prywatnosci" className="hover:text-foreground">Polityka prywatności</a>
           <p>© {new Date().getFullYear()} {site.company.legalName}</p>
         </div>
       </div>
