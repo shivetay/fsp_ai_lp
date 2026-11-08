@@ -6,10 +6,10 @@ export function Services() {
     <Section id="uslugi" className="bg-muted/40">
       <SectionHeading
         eyebrow="Usługi"
-        title="Dwie rzeczy, które robię najlepiej"
-        lead="Wdrażam AI tam, gdzie oszczędza czas, i automatyzuję procesy tam, gdzie ktoś robi to samo po raz setny."
+        title="W czym mogę pomóc"
+        lead="Wdrażam AI tam, gdzie oszczędza czas, automatyzuję procesy tam, gdzie ktoś robi to samo po raz setny, i dbam, żeby wszystko działało także po wdrożeniu."
       />
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid gap-4 lg:grid-cols-3">
         {services.map((s, i) => (
           <div key={s.title} className="flex flex-col rounded-xl border border-border bg-background p-8">
             <p className="font-mono text-xs text-muted-foreground">{String(i + 1).padStart(2, "0")}</p>

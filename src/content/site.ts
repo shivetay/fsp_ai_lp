@@ -81,6 +81,17 @@ export const services = [
       "Monitoring i opieka po wdrożeniu",
     ],
   },
+  {
+    title: "Wsparcie i utrzymanie",
+    lead: "Automaty i AI działają stabilnie, a Ty nie musisz o nich myśleć.",
+    points: [
+      "Stały monitoring działania i alerty o błędach",
+      "Szybkie poprawki, gdy zmieni się zewnętrzne narzędzie lub API",
+      "Aktualizacje modeli AI i kontrola kosztów",
+      "Optymalizacja i rozbudowa o kolejne procesy",
+      "Pomoc dla zespołu i miesięczny raport oszczędności",
+    ],
+  },
 ];
 
 // Przykładowe procesy, które automatyzuję.
