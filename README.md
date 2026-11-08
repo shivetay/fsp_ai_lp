@@ -36,3 +36,8 @@ Sekcja `#demo` pokazuje jedno z dwóch:
 ## Deploy
 
 Najprościej na Vercelu: zaimportuj repozytorium i ustaw zmienne z `.env.example`.
+
+## Analityka
+
+Strona ma wpięte Vercel Web Analytics (`@vercel/analytics`, komponent `<Analytics />` w `src/app/layout.tsx`).
+Po deployu włącz je w panelu Vercel: projekt → **Analytics** → **Enable**. Analityka nie używa cookies, więc nie wymaga bannera zgody.
