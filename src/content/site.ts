@@ -3,10 +3,13 @@
 export const site = {
   brand: "FSP",
   name: "Łukasz Dawidowicz",
-  role: "AI & Automation Engineer · Frontend Developer",
+  role: "Wdrożenia AI i automatyzacja procesów dla małych firm",
   tagline:
-    "Automatyzuję powtarzalną pracę i wdrażam rozwiązania AI, które realnie oszczędzają czas Twojego zespołu.",
-  email: "kontakt@fsplukaszdawidowicz.pl",
+    "Pomagam lokalnym firmom wejść w świat AI bez ryzyka i bez żargonu. Automatyzuję powtarzalną pracę, żeby Ty i Twój zespół mieli czas na klientów.",
+  // Dane kontaktowe: puste pole = element się nie wyświetla.
+  email: "", // np. "kontakt@twojadomena.pl"
+  phone: "", // np. "+48 600 000 000"
+  location: "", // np. "Warszawa i okolice, zdalnie w całej Polsce"
   linkedin: "https://www.linkedin.com/in/%C5%82ukasz-dawidowicz-698a59b6/",
   github: "https://github.com/shivetay",
   company: {
@@ -16,120 +19,161 @@ export const site = {
 };
 
 export const nav = [
+  { href: "#o-mnie", label: "O mnie" },
   { href: "#uslugi", label: "Usługi" },
-  { href: "#proces", label: "Proces" },
-  { href: "#realizacje", label: "Realizacje" },
-  { href: "#demo", label: "Demo" },
-  { href: "#stack", label: "Stack" },
+  { href: "#procesy", label: "Procesy" },
+  { href: "#branze", label: "Branże" },
+  { href: "#roi", label: "Kalkulator ROI" },
+  { href: "#jak-pracuje", label: "Jak pracuję" },
   { href: "#faq", label: "FAQ" },
 ];
 
-export const stats = [
-  { value: "5+", label: "lat w komercyjnych projektach" },
-  { value: "AI", label: "LLM, RAG, agenci" },
-  { value: "24/7", label: "automaty, które nie śpią" },
+export const heroPoints = [
+  "Bezpłatna rozmowa i analiza",
+  "Stała cena przed startem",
+  "Działające demo w kilka dni",
 ];
 
-export const services = [
-  {
-    title: "Automatyzacja procesów",
-    description:
-      "Łączę Twoje narzędzia (CRM, maile, arkusze, faktury) w przepływy n8n / Make / Zapier albo w dedykowany kod. Koniec z kopiuj-wklej.",
-    points: ["n8n, Make, Zapier", "Integracje API i webhooki", "Raporty generowane automatycznie"],
-  },
-  {
-    title: "Chatboty i asystenci AI",
-    description:
-      "Asystent, który zna Twoją ofertę, dokumentację i FAQ. Na stronie, w Slacku, na Discordzie albo w panelu klienta.",
-    points: ["RAG na Twoich dokumentach", "Obsługa klienta i lead generation", "Integracja z Claude / OpenAI"],
-  },
-  {
-    title: "Agenci AI i przetwarzanie dokumentów",
-    description:
-      "Wyciąganie danych z PDF-ów, maili i formularzy, klasyfikacja zgłoszeń, przygotowanie odpowiedzi do akceptacji.",
-    points: ["Ekstrakcja danych z dokumentów", "Klasyfikacja i routing zgłoszeń", "Człowiek zatwierdza, AI robi resztę"],
-  },
-  {
-    title: "Aplikacje i MVP z AI",
-    description:
-      "Frontend to moja baza. Buduję szybkie, dopracowane aplikacje webowe z funkcjami AI, od prototypu po produkcję.",
-    points: ["React, Next.js, TypeScript", "Panele, dashboardy, SaaS", "Testy E2E i jakość od pierwszego dnia"],
-  },
-  {
-    title: "Audyt i konsultacje AI",
-    description:
-      "Sprawdzam, które procesy w firmie warto zautomatyzować i ile to da. Dostajesz konkretną listę kroków z wyceną.",
-    points: ["Mapa procesów i quick wins", "Szacunek oszczędności czasu", "Dobór narzędzi i kosztów"],
-  },
-  {
-    title: "Utrzymanie i rozwój",
-    description:
-      "Automaty wymagają opieki: monitoring, poprawki po zmianach w API, nowe scenariusze. Biorę to na siebie.",
-    points: ["Monitoring i alerty", "Abonament godzinowy", "Dokumentacja dla zespołu"],
-  },
-];
+// O mnie: wstęp, że jestem developerem, plus wdrożenia AI.
+export const about = {
+  title: "Developer, który wdraża AI w praktyce",
+  paragraphs: [
+    "Jestem programistą z kilkuletnim doświadczeniem komercyjnym. Budowałem aplikacje webowe i mobilne dla dużych marek, między innymi marketplace market.orange.pl, aplikacje mobile web w AirSlate i platformy VOD na Smart TV.",
+    "Od dłuższego czasu pracuję przy projektach z AI: integracje modeli językowych, asystenci oparci na dokumentach firmy, automatyczne przetwarzanie danych. Prowadzę też własny produkt, clusterboard.pl, platformę do współpracy dla freelancerów.",
+    "Teraz przenoszę to doświadczenie do małych firm. Wiem, jak zbudować rozwiązanie, które działa stabilnie, a nie tylko ładnie wygląda na prezentacji. Rozmawiam prostym językiem i zaczynam od tego, co da Ci najszybszy efekt.",
+  ],
+  aiInfo: [
+    { title: "Modele AI", text: "Claude, OpenAI i modele open source, dobrane do zadania i budżetu." },
+    { title: "Twoje dane", text: "Asystenci uczeni na Twoich dokumentach, cennikach i FAQ (RAG)." },
+    { title: "Integracje", text: "Poczta, kalendarz, CRM, arkusze, systemy fakturowe, Messenger, WhatsApp." },
+    { title: "Bezpieczeństwo", text: "Konta i klucze należą do Ciebie, rozwiązania zgodne z RODO." },
+  ],
+};
 
-export const process = [
-  { step: "01", title: "Rozmowa", text: "30 minut online. Opowiadasz, co zabiera Ci najwięcej czasu." },
-  { step: "02", title: "Analiza i wycena", text: "Mapuję proces, proponuję rozwiązanie i podaję stałą cenę oraz termin." },
-  { step: "03", title: "Prototyp", text: "W kilka dni dostajesz działające demo na swoich danych." },
-  { step: "04", title: "Wdrożenie", text: "Podpinam rozwiązanie pod Twoje narzędzia, testuję i szkolę zespół." },
-  { step: "05", title: "Opieka", text: "Monitoruję działanie i rozwijam automaty, gdy firma rośnie." },
-];
-
-// Przykładowe realizacje: podmień na prawdziwe case studies.
-export const caseStudies = [
-  {
-    tag: "Automatyzacja",
-    title: "Obsługa zapytań ofertowych",
-    problem: "Handlowcy ręcznie przepisywali zapytania z maili do CRM.",
-    solution: "AI czyta maila, wyciąga dane, zakłada leada w CRM i proponuje odpowiedź.",
-    result: "−12 h pracy tygodniowo",
-  },
-  {
-    tag: "Asystent AI",
-    title: "Asystent wiedzy dla zespołu",
-    problem: "Nowi pracownicy w kółko pytali o te same procedury.",
-    solution: "Chatbot RAG na dokumentacji firmy, dostępny w komunikatorze zespołu.",
-    result: "−60% pytań do seniorów",
-  },
-  {
-    tag: "Aplikacja",
-    title: "Platforma do współpracy freelancerów",
-    problem: "Projekty, pliki i feedback rozproszone w wielu narzędziach.",
-    solution: "Własna aplikacja webowa (Next.js) z tablicami projektów i komentarzami.",
-    result: "Jedno miejsce zamiast pięciu narzędzi",
-  },
-];
-
-// Dotychczasowe elementy strony: stack technologiczny.
 export const stack = [
   { group: "Frontend", items: ["React", "Next.js", "TypeScript", "Zustand"] },
   { group: "Backend", items: ["Node.js", "Express"] },
   { group: "Testing", items: ["Jest", "Playwright", "Cypress"] },
   { group: "Database", items: ["MongoDB", "PostgreSQL"] },
-  { group: "AI & Automation", items: ["Claude", "OpenAI", "RAG", "n8n", "Make"] },
+  { group: "AI i automatyzacje", items: ["Claude", "OpenAI", "RAG", "n8n", "Make", "Zapier"] },
+];
+
+export const services = [
+  {
+    title: "Wdrożenie AI w firmie",
+    lead: "Sztuczna inteligencja, która odpowiada, pisze i porządkuje za Ciebie.",
+    points: [
+      "Asystent AI na stronę, Messengera lub WhatsAppa, który zna Twoją ofertę",
+      "Automatyczne odpowiedzi na maile i zapytania, do Twojej akceptacji",
+      "Generowanie ofert, opisów produktów i postów do social mediów",
+      "Wyciąganie danych z faktur, PDF-ów i zdjęć dokumentów",
+      "Szkolenie zespołu z codziennej pracy z narzędziami AI",
+    ],
+  },
+  {
+    title: "Automatyzacja procesów",
+    lead: "Połączę Twoje narzędzia tak, żeby dane przepływały same.",
+    points: [
+      "Integracja poczty, kalendarza, CRM, arkuszy i systemu faktur",
+      "Przepływy w n8n, Make lub Zapier albo dedykowany kod",
+      "Automatyczne przypomnienia, raporty i powiadomienia",
+      "Koniec z przepisywaniem danych między programami",
+      "Monitoring i opieka po wdrożeniu",
+    ],
+  },
+];
+
+// Przykładowe procesy, które automatyzuję.
+export const processes = [
+  { title: "Obsługa zapytań", text: "AI czyta maila lub wiadomość, kategoryzuje ją i przygotowuje odpowiedź." },
+  { title: "Rezerwacje i przypomnienia", text: "Zapisy online, SMS lub mail dzień przed wizytą, mniej nieobecności." },
+  { title: "Faktury i koszty", text: "Odczyt faktur kosztowych, wpis do arkusza lub systemu, wysyłka do księgowej." },
+  { title: "Oferty i wyceny", text: "Wycena z formularza w kilka minut, wygenerowana według Twojego cennika." },
+  { title: "Leady do CRM", text: "Każde zapytanie z formularza, maila czy Facebooka trafia do jednej listy." },
+  { title: "Opinie klientów", text: "Automatyczna prośba o opinię Google po zakończonej usłudze." },
+  { title: "Social media", text: "Szkice postów i grafik na podstawie Twoich zdjęć i nowości w ofercie." },
+  { title: "Raporty", text: "Cotygodniowe podsumowanie sprzedaży, rezerwacji czy kosztów na maila." },
+  { title: "Dokumenty i umowy", text: "Umowy, protokoły i potwierdzenia uzupełniane danymi klienta." },
+  { title: "Windykacja", text: "Uprzejme przypomnienia o płatnościach wysyłane w odpowiednim momencie." },
+  { title: "Wiedza w firmie", text: "Asystent, który odpowiada pracownikom na pytania o procedury i cenniki." },
+  { title: "Zamówienia", text: "Zamówienia z maila lub sklepu trafiają prosto do magazynu i faktur." },
+];
+
+// Branże: lokalne małe firmy, które chcą wejść w AI.
+export const industries = [
+  { name: "Gabinety i usługi medyczne", example: "rezerwacje, przypomnienia, odpowiedzi na pytania pacjentów" },
+  { name: "Salony beauty i fryzjerskie", example: "zapisy, przypomnienia, opinie Google, posty" },
+  { name: "Restauracje i kawiarnie", example: "rezerwacje stolików, zamówienia, menu i social media" },
+  { name: "Biura rachunkowe", example: "odczyt faktur, zbieranie dokumentów od klientów" },
+  { name: "Nieruchomości", example: "opisy ofert, obsługa zapytań, umawianie prezentacji" },
+  { name: "Warsztaty i serwisy", example: "przyjęcia zleceń, statusy napraw, przypomnienia o przeglądach" },
+  { name: "Firmy budowlane i remontowe", example: "wyceny, harmonogramy, dokumentacja zdjęciowa" },
+  { name: "Sklepy lokalne i e-commerce", example: "opisy produktów, obsługa klienta, zamówienia" },
+  { name: "Szkoły i kursy", example: "zapisy, płatności, materiały i komunikacja z kursantami" },
+];
+
+// Opis pracy: jak wygląda współpraca.
+export const workSteps = [
+  {
+    step: "01",
+    title: "Bezpłatna rozmowa",
+    text: "30 minut online lub na miejscu. Opowiadasz, jak wygląda Twój dzień i co zabiera najwięcej czasu.",
+  },
+  {
+    step: "02",
+    title: "Analiza i wycena",
+    text: "Wybieram 1 do 3 procesów z największym zyskiem. Dostajesz plan, stałą cenę i termin, razem z wyliczeniem ROI.",
+  },
+  {
+    step: "03",
+    title: "Prototyp",
+    text: "W kilka dni pokazuję działające rozwiązanie na Twoich danych. Testujesz, zanim cokolwiek zmienisz w firmie.",
+  },
+  {
+    step: "04",
+    title: "Wdrożenie i szkolenie",
+    text: "Podłączam automat do Twoich narzędzi, testuję i uczę zespół obsługi. Dostajesz prostą instrukcję.",
+  },
+  {
+    step: "05",
+    title: "Opieka i rozwój",
+    text: "Pilnuję, żeby wszystko działało. Gdy firma rośnie, dokładamy kolejne automaty.",
+  },
 ];
 
 export const faq = [
   {
-    q: "Ile kosztuje automatyzacja?",
-    a: "Proste przepływy zaczynają się od kilkuset złotych, większe wdrożenia AI wyceniam po analizie. Zawsze dostajesz stałą cenę przed startem.",
+    q: "Mam małą firmę. Czy AI ma dla mnie sens?",
+    a: "Tak, często większy niż w dużej firmie. Przy kilku osobach każda zaoszczędzona godzina jest od razu widoczna. Zaczynamy od jednego procesu i sprawdzamy efekt w kalkulatorze ROI.",
+  },
+  {
+    q: "Nie znam się na technologii. Czy to problem?",
+    a: "Nie. Moją rolą jest przełożenie technologii na prosty efekt. Ty mówisz, co Cię męczy, ja proponuję rozwiązanie i uczę z niego korzystać.",
+  },
+  {
+    q: "Ile to kosztuje?",
+    a: "Proste automaty to koszt rzędu kilkuset złotych, większe wdrożenia AI wyceniam po analizie. Zawsze dostajesz stałą cenę przed startem. Dochodzą niewielkie miesięczne koszty narzędzi, które z góry wyliczam.",
   },
   {
     q: "Ile trwa wdrożenie?",
-    a: "Prototyp zwykle w 3 do 7 dni roboczych, pełne wdrożenie w 2 do 4 tygodnie, zależnie od liczby integracji.",
+    a: "Prototyp zwykle w 3 do 7 dni roboczych, pełne wdrożenie w 2 do 4 tygodnie, zależnie od liczby narzędzi do połączenia.",
   },
   {
-    q: "Czy moje dane są bezpieczne?",
-    a: "Tak. Pracuję na kontach i kluczach API należących do Ciebie, podpisuję NDA i dobieram modele zgodne z RODO. Dane wrażliwe mogą zostać na Twojej infrastrukturze.",
-  },
-  {
-    q: "Nie wiem, co mogę zautomatyzować. Czy to problem?",
-    a: "Nie. Od tego jest bezpłatna rozmowa i audyt. Wspólnie znajdziemy procesy, które dadzą największy zwrot.",
+    q: "Czy moje dane i dane klientów są bezpieczne?",
+    a: "Tak. Pracuję na kontach należących do Ciebie, podpisuję NDA i umowę powierzenia danych. Dobieram narzędzia zgodne z RODO.",
   },
   {
     q: "Co jeśli coś przestanie działać?",
-    a: "Oferuję opiekę powdrożeniową z monitoringiem. Gdy zewnętrzne API się zmieni, poprawiam automat, zanim zauważy to Twój zespół.",
+    a: "W ramach opieki monitoruję automaty i naprawiam problemy, zanim zauważy je Twój zespół.",
   },
 ];
+
+// Domyślne wartości kalkulatora ROI.
+export const roiDefaults = {
+  people: 2,
+  hoursPerWeek: 5,
+  hourlyCost: 60,
+  automationPct: 60,
+  setupCost: 4000,
+  monthlyCost: 200,
+};

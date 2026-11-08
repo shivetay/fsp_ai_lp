@@ -1,12 +1,16 @@
-import { process } from "@/content/site";
+import { workSteps } from "@/content/site";
 import { Section, SectionHeading } from "./ui";
 
 export function Process() {
   return (
-    <Section id="proces" className="bg-muted/40">
-      <SectionHeading eyebrow="Proces" title="Jak wygląda współpraca" lead="Prosto, przejrzyście i bez niespodzianek w fakturze." />
+    <Section id="jak-pracuje" className="bg-muted/40">
+      <SectionHeading
+        eyebrow="Jak pracuję"
+        title="Współpraca krok po kroku"
+        lead="Bez długich umów na start i bez niespodzianek w fakturze. Najpierw efekt, potem kolejne kroki."
+      />
       <ol className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
-        {process.map((p) => (
+        {workSteps.map((p) => (
           <li key={p.step} className="bg-background p-6">
             <span className="font-mono text-sm text-muted-foreground">{p.step}</span>
             <h3 className="mt-3 font-semibold">{p.title}</h3>

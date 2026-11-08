@@ -1,4 +1,4 @@
-import { site, stats } from "@/content/site";
+import { heroPoints, site } from "@/content/site";
 import { buttonClass } from "./ui";
 
 export function Hero() {
@@ -8,29 +8,29 @@ export function Hero() {
       <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-24 sm:px-6 sm:pt-32">
         <div className="fade-up max-w-3xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Przyjmuję nowe projekty
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> {site.brand} {site.name}
           </span>
-          <p className="mt-8 font-mono text-sm text-muted-foreground">{site.brand}</p>
-          <h1 className="mt-2 text-5xl font-semibold tracking-tight sm:text-7xl">{site.name}</h1>
-          <p className="mt-4 text-xl text-muted-foreground sm:text-2xl">{site.role}</p>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed">{site.tagline}</p>
+          <h1 className="mt-8 text-4xl font-semibold tracking-tight sm:text-6xl">
+            AI i automatyzacje dla małych, lokalnych firm
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">{site.tagline}</p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a href="#kontakt" className={buttonClass.primary}>
-              Umów bezpłatną konsultację
+              Umów bezpłatną rozmowę
             </a>
-            <a href="#demo" className={buttonClass.outline}>
-              Zobacz demo
+            <a href="#roi" className={buttonClass.outline}>
+              Policz, ile zaoszczędzisz
             </a>
           </div>
         </div>
-        <dl className="mt-20 grid max-w-3xl grid-cols-3 gap-6 border-t border-border pt-8">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <dt className="text-2xl font-semibold sm:text-3xl">{s.value}</dt>
-              <dd className="mt-1 text-sm text-muted-foreground">{s.label}</dd>
-            </div>
+        <ul className="mt-16 flex flex-wrap gap-x-8 gap-y-3 border-t border-border pt-8 text-sm">
+          {heroPoints.map((p) => (
+            <li key={p} className="flex items-center gap-2">
+              <span className="grid h-5 w-5 place-items-center rounded-full bg-primary text-[10px] text-primary-foreground">✓</span>
+              {p}
+            </li>
           ))}
-        </dl>
+        </ul>
       </div>
     </section>
   );

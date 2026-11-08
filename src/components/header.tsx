@@ -12,7 +12,7 @@ export function Header() {
           </span>
           <span className="hidden sm:inline">{site.name}</span>
         </a>
-        <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
+        <nav className="hidden items-center gap-6 text-sm text-muted-foreground lg:flex">
           {nav.map((n) => (
             <a key={n.href} href={n.href} className="transition-colors hover:text-foreground">
               {n.label}

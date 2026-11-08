@@ -1,10 +1,12 @@
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
+import { About } from "@/components/about";
 import { Services } from "@/components/services";
+import { Processes } from "@/components/processes";
+import { Industries } from "@/components/industries";
+import { RoiCalculator } from "@/components/roi-calculator";
 import { Process } from "@/components/process";
-import { CaseStudies } from "@/components/case-studies";
 import { DemoSection } from "@/components/demo-section";
-import { Stack } from "@/components/stack";
 import { Faq } from "@/components/faq";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
@@ -15,11 +17,13 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <About />
         <Services />
+        <Processes />
+        <Industries />
+        <RoiCalculator />
         <Process />
-        <CaseStudies />
         <DemoSection />
-        <Stack />
         <Faq />
         <Contact />
       </main>

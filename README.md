@@ -1,6 +1,6 @@
 # FSP Łukasz Dawidowicz: AI i automatyzacje
 
-Strona freelancera (AI, automatyzacje, aplikacje webowe). Next.js 16, Tailwind CSS 4, font Geist, jasny i ciemny motyw.
+Landing page wdrożeniowca AI i automatyzacji dla małych, lokalnych firm. Sekcje: o mnie i stack, usługi, procesy, branże, kalkulator ROI, jak pracuję, demo, FAQ, kontakt. Next.js 16, Tailwind CSS 4, font Geist, jasny i ciemny motyw.
 
 ## Start
 
@@ -12,8 +12,8 @@ npm run dev
 
 ## Treść
 
-Cała treść (usługi, proces, realizacje, stack, FAQ, dane firmy) jest w `src/content/site.ts`.
-Podmień przykładowe realizacje na prawdziwe.
+Cała treść (usługi, procesy, branże, kroki współpracy, FAQ, domyślne wartości kalkulatora ROI, dane kontaktowe i firmy) jest w `src/content/site.ts`.
+Uzupełnij `email`, `phone` i `location` w `site`: puste pola nie wyświetlają się na stronie.
 
 ## Formularz kontaktowy
 

@@ -70,17 +70,14 @@ export function ContactForm() {
         <Field label="Czego dotyczy?" htmlFor="topic">
           <select id="topic" name="topic" className={input} defaultValue="Automatyzacja procesów">
             <option>Automatyzacja procesów</option>
-            <option>Chatbot / asystent AI</option>
-            <option>Agenci AI i dokumenty</option>
-            <option>Aplikacja / MVP</option>
-            <option>Audyt i konsultacje</option>
-            <option>Inne</option>
+            <option>Wdrożenie AI</option>
+            <option>Nie wiem jeszcze, chcę porozmawiać</option>
           </select>
         </Field>
       </div>
       <Field label="Wiadomość" htmlFor="message">
         <textarea id="message" name="message" required rows={5} maxLength={5000} className={input}
-          placeholder="Jaki proces zabiera Ci najwięcej czasu?" />
+          placeholder="Czym zajmuje się Twoja firma i co zabiera Wam najwięcej czasu?" />
       </Field>
       {/* Honeypot przeciw botom: ukryte pole, ludzie go nie wypełnią. */}
       <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
