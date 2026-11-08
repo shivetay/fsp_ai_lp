@@ -89,12 +89,9 @@ export const processes = [
   { title: "Rezerwacje i przypomnienia", text: "Zapisy online, SMS lub mail dzień przed wizytą, mniej nieobecności." },
   { title: "Faktury i koszty", text: "Odczyt faktur kosztowych, wpis do arkusza lub systemu, wysyłka do księgowej." },
   { title: "Oferty i wyceny", text: "Wycena z formularza w kilka minut, wygenerowana według Twojego cennika." },
-  { title: "Leady do CRM", text: "Każde zapytanie z formularza, maila czy Facebooka trafia do jednej listy." },
   { title: "Opinie klientów", text: "Automatyczna prośba o opinię Google po zakończonej usłudze." },
-  { title: "Social media", text: "Szkice postów i grafik na podstawie Twoich zdjęć i nowości w ofercie." },
   { title: "Raporty", text: "Cotygodniowe podsumowanie sprzedaży, rezerwacji czy kosztów na maila." },
   { title: "Dokumenty i umowy", text: "Umowy, protokoły i potwierdzenia uzupełniane danymi klienta." },
-  { title: "Windykacja", text: "Uprzejme przypomnienia o płatnościach wysyłane w odpowiednim momencie." },
   { title: "Wiedza w firmie", text: "Asystent, który odpowiada pracownikom na pytania o procedury i cenniki." },
   { title: "Zamówienia", text: "Zamówienia z maila lub sklepu trafiają prosto do magazynu i faktur." },
 ];
