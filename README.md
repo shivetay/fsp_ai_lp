@@ -54,3 +54,10 @@ Opisy przykładowych automatyzacji są w `docs/procesy/` (np. `leady-do-crm.md`)
 - Ustaw `NEXT_PUBLIC_SITE_URL` na docelową domenę. Po deployu dodaj stronę do Google Search Console,
   zweryfikuj ją (`NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`) i zgłoś `sitemap.xml`.
 - Uzupełnij `location` w `src/content/site.ts`: miasto/region wzmacnia lokalne SEO i trafia do danych strukturalnych.
+
+## Podstrony SEO
+
+- `/uslugi` i `/uslugi/[slug]`: wdrożenie AI, automatyzacja procesów, wsparcie i utrzymanie.
+- `/branze` i `/branze/[slug]`: 9 branż (gabinety, salony beauty, restauracje, biura rachunkowe, nieruchomości, warsztaty, firmy budowlane, sklepy, szkoły i kursy).
+- Treści w `src/content/pages.ts`. Nowa podstrona = nowy obiekt w tablicy; trafia automatycznie do sitemap.
+- Każda podstrona ma własny tytuł, opis, canonical, okruszki oraz JSON-LD (BreadcrumbList, Service, FAQPage).

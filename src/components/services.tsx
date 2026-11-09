@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { services } from "@/content/site";
 import { Section, SectionHeading, buttonClass } from "./ui";
 
@@ -23,9 +24,14 @@ export function Services() {
                 </li>
               ))}
             </ul>
-            <a href="#kontakt" className={`${buttonClass.outline} mt-8 self-start`}>
-              Zapytaj o wycenę
-            </a>
+            <div className="mt-8 flex flex-wrap gap-2">
+              <Link href={`/uslugi/${s.slug}`} className={buttonClass.outline}>
+                Więcej o usłudze
+              </Link>
+              <a href="#kontakt" className={`${buttonClass.outline} border-transparent`}>
+                Zapytaj o wycenę
+              </a>
+            </div>
           </div>
         ))}
       </div>

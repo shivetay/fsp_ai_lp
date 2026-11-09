@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { industries } from "@/content/site";
 import { Card, Section, SectionHeading } from "./ui";
 
@@ -11,10 +12,13 @@ export function Industries() {
       />
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {industries.map((i) => (
-          <Card key={i.name} className="bg-background p-5">
-            <h3 className="font-semibold">{i.name}</h3>
-            <p className="mt-1 text-sm text-muted-foreground">{i.example}</p>
-          </Card>
+          <Link key={i.name} href={`/branze/${i.slug}`} className="group">
+            <Card className="h-full bg-background p-5">
+              <h3 className="font-semibold group-hover:underline">{i.name}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{i.example}</p>
+              <span className="mt-3 inline-block text-xs font-medium text-muted-foreground group-hover:text-foreground">Zobacz rozwiązania →</span>
+            </Card>
+          </Link>
         ))}
       </div>
       <p className="mt-6 text-sm text-muted-foreground">

@@ -62,6 +62,7 @@ export const stack = [
 
 export const services = [
   {
+    slug: "wdrozenie-ai",
     title: "Wdrożenie AI w firmie",
     lead: "Sztuczna inteligencja, która odpowiada, pisze i porządkuje za Ciebie.",
     points: [
@@ -73,6 +74,7 @@ export const services = [
     ],
   },
   {
+    slug: "automatyzacja-procesow",
     title: "Automatyzacja procesów",
     lead: "Połączę Twoje narzędzia tak, żeby dane przepływały same.",
     points: [
@@ -84,6 +86,7 @@ export const services = [
     ],
   },
   {
+    slug: "wsparcie-i-utrzymanie",
     title: "Wsparcie i utrzymanie",
     lead: "Automaty i AI działają stabilnie, a Ty nie musisz o nich myśleć.",
     points: [
@@ -111,15 +114,15 @@ export const processes = [
 
 // Branże: lokalne małe firmy, które chcą wejść w AI.
 export const industries = [
-  { name: "Gabinety i usługi medyczne", example: "rezerwacje, przypomnienia, odpowiedzi na pytania pacjentów" },
-  { name: "Salony beauty i fryzjerskie", example: "zapisy, przypomnienia, opinie Google, posty" },
-  { name: "Restauracje i kawiarnie", example: "rezerwacje stolików, zamówienia, menu i social media" },
-  { name: "Biura rachunkowe", example: "odczyt faktur, zbieranie dokumentów od klientów" },
-  { name: "Nieruchomości", example: "opisy ofert, obsługa zapytań, umawianie prezentacji" },
-  { name: "Warsztaty i serwisy", example: "przyjęcia zleceń, statusy napraw, przypomnienia o przeglądach" },
-  { name: "Firmy budowlane i remontowe", example: "wyceny, harmonogramy, dokumentacja zdjęciowa" },
-  { name: "Sklepy lokalne i e-commerce", example: "opisy produktów, obsługa klienta, zamówienia" },
-  { name: "Szkoły i kursy", example: "zapisy, płatności, materiały i komunikacja z kursantami" },
+  { slug: "gabinety", name: "Gabinety i usługi medyczne", example: "rezerwacje, przypomnienia, odpowiedzi na pytania pacjentów" },
+  { slug: "salony-beauty", name: "Salony beauty i fryzjerskie", example: "zapisy, przypomnienia, opinie Google, posty" },
+  { slug: "restauracje", name: "Restauracje i kawiarnie", example: "rezerwacje stolików, zamówienia, menu i social media" },
+  { slug: "biura-rachunkowe", name: "Biura rachunkowe", example: "odczyt faktur, zbieranie dokumentów od klientów" },
+  { slug: "nieruchomosci", name: "Nieruchomości", example: "opisy ofert, obsługa zapytań, umawianie prezentacji" },
+  { slug: "warsztaty", name: "Warsztaty i serwisy", example: "przyjęcia zleceń, statusy napraw, przypomnienia o przeglądach" },
+  { slug: "firmy-budowlane", name: "Firmy budowlane i remontowe", example: "wyceny, harmonogramy, dokumentacja zdjęciowa" },
+  { slug: "sklepy", name: "Sklepy lokalne i e-commerce", example: "opisy produktów, obsługa klienta, zamówienia" },
+  { slug: "szkoly-i-kursy", name: "Szkoły i kursy", example: "zapisy, płatności, materiały i komunikacja z kursantami" },
 ];
 
 // Opis pracy: jak wygląda współpraca.
