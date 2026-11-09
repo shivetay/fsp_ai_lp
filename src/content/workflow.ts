@@ -22,6 +22,7 @@ export const blocks: Block[] = [
   { id: "form", kind: "trigger", label: "Formularz na stronie", desc: "Nowe zgłoszenie z formularza WWW", log: "Nowe zgłoszenie z formularza: Anna Kowalska, anna@przyklad.pl", minutes: 0 },
   { id: "email", kind: "trigger", label: "Nowy e-mail", desc: "Wiadomość w skrzynce firmowej", log: "Nowy e-mail w skrzynce kontakt@: „Zapytanie o termin”", minutes: 0 },
   { id: "messenger", kind: "trigger", label: "Messenger / Instagram", desc: "Wiadomość z social mediów", log: "Nowa wiadomość na Messengerze od klientki", minutes: 0 },
+  { id: "booksy", kind: "trigger", label: "Mail z Booksy", desc: "Powiadomienie o nowej, odwołanej lub przełożonej wizycie", log: "Mail z Booksy: nowa wizyta, strzyżenie damskie, piątek 10:00", minutes: 0 },
   { id: "booking", kind: "trigger", label: "Rezerwacja online", desc: "Nowa wizyta w systemie rezerwacji", log: "Nowa rezerwacja: czwartek 14:00", minutes: 0 },
   { id: "order", kind: "trigger", label: "Zamówienie w sklepie", desc: "Nowe zamówienie (WooCommerce, Shopify…)", log: "Nowe zamówienie #1024 na 349 zł", minutes: 0 },
   { id: "invoice", kind: "trigger", label: "Faktura PDF", desc: "Dokument w mailu lub folderze", log: "Wpłynęła faktura kosztowa FV/11/2026 (PDF)", minutes: 0 },
@@ -80,6 +81,14 @@ export const presets: Preset[] = [
     description: "AI odpowiada na wiadomości z Instagrama, podsyła link do rezerwacji i dopisuje klientkę do bazy.",
     runsPerMonth: 150,
     chain: ["messenger", "classify", "reply", "sheet", "notify"],
+  },
+  {
+    id: "booksy",
+    name: "Salon: Booksy → arkusz i Telegram",
+    industrySlug: "salony-beauty",
+    description: "Maile z Booksy o nowych, odwołanych i przełożonych wizytach AI zamienia na wiersz w arkuszu i powiadomienie na Telegramie.",
+    runsPerMonth: 250,
+    chain: ["booksy", "extract", "sheet", "notify"],
   },
   {
     id: "restauracje",

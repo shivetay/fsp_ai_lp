@@ -175,11 +175,12 @@ export const industryPages: IndustryPage[] = [
       { title: "Przypomnienia i potwierdzenia", text: "SMS przed wizytą i automatyczne zwalnianie terminu przy odwołaniu." },
       { title: "Opinie Google", text: "Po wizycie klientka dostaje prośbę o opinię z bezpośrednim linkiem." },
       { title: "Szkice postów", text: "AI przygotowuje opisy do zdjęć Twoich realizacji, Ty tylko akceptujesz." },
+      { title: "Integracja z Booksy", text: "Wizyty z Booksy (nowe, odwołane, przełożone) trafiają do arkusza i na Telegram, na podstawie maili z powiadomieniami." },
     ],
     scenario: { text: "Właścicielka odpisuje na wiadomości i potwierdza wizyty przez ok. 1 godzinę dziennie.", hours: 20 },
     faq: [
       { q: "Czy klientki zauważą, że odpisuje AI?", a: "Asystent pisze w Twoim stylu, ale zawsze przedstawia się jako asystent salonu. Trudniejsze sprawy przekazuje do Ciebie." },
-      { q: "Czy to zadziała z Booksy?", a: "Tak, można to połączyć z popularnymi systemami rezerwacji. Szczegóły sprawdzę na konsultacji." },
+      { q: "Czy to zadziała z Booksy?", a: "Tak, w jedną stronę. Booksy nie udostępnia publicznego API, więc integracja czyta maile z powiadomieniami Booksy: nowe, odwołane i przełożone wizyty trafiają do arkusza, CRM lub na Telegram. Nie tworzy wizyt w Booksy, do tego potrzebny jest program partnerski Booksy." },
     ],
   },
   {
