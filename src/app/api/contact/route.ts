@@ -55,7 +55,8 @@ export async function POST(req: Request) {
     headers: { Authorization: `Bearer ${RESEND_API_KEY}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       from: CONTACT_FROM_EMAIL,
-      to: [CONTACT_TO_EMAIL],
+      // Można podać kilka adresów po przecinku, np. "kontakt@domena.pl, ja@gmail.com".
+      to: CONTACT_TO_EMAIL.split(",").map((e) => e.trim()).filter(Boolean),
       reply_to: email,
       subject: `[Strona] ${topic || "Zapytanie"}: ${name}`,
       html,
