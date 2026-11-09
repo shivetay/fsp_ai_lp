@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { roiDefaults } from "@/content/site";
-import { aiCostPerRun, fmtRange, platformCost, platforms, type PlatformId } from "@/content/platforms";
+import { aiCostPerRun, fmtRange, platformCost, platforms, priceNote, rateLabel, type PlatformId, type Rates } from "@/content/platforms";
 import { Section, SectionHeading, buttonClass } from "./ui";
 
 const WEEKS_PER_MONTH = 4.33;
@@ -25,17 +25,18 @@ const FIELDS: { key: Key; label: string; hint: string; min: number; max: number;
 
 const mid = (r: { min: number; max: number }) => (r.min + r.max) / 2;
 
-export function RoiCalculator() {
+export function RoiCalculator({ rates }: { rates: Rates }) {
   const [v, setV] = useState(roiDefaults);
   const [platform, setPlatform] = useState<PlatformId>("make");
   const set = (k: Key, value: number) => setV((s) => ({ ...s, [k]: value }));
 
   const hoursSaved = v.people * v.hoursPerWeek * WEEKS_PER_MONTH * (v.automationPct / 100);
   const monthlySavings = hoursSaved * v.hourlyCost;
-  const comparison = platforms.map((p) => ({ ...p, cost: platformCost(p.id, v.runsPerMonth, v.steps) }));
+  const comparison = platforms.map((p) => ({ ...p, cost: platformCost(p.id, v.runsPerMonth, v.steps, rates) }));
   const cheapest = Math.min(...comparison.map((c) => mid(c.cost)));
-  const platCost = platformCost(platform, v.runsPerMonth, v.steps);
-  const aiCost = { min: v.runsPerMonth * aiCostPerRun.min, max: v.runsPerMonth * aiCostPerRun.max };
+  const platCost = platformCost(platform, v.runsPerMonth, v.steps, rates);
+  const aiPerRun = aiCostPerRun(rates);
+  const aiCost = { min: v.runsPerMonth * aiPerRun.min, max: v.runsPerMonth * aiPerRun.max };
   const monthlyCost = mid(platCost) + mid(aiCost);
   const netMonthly = monthlySavings - monthlyCost;
   const firstYear = netMonthly * 12 - v.setupCost;
@@ -113,11 +114,12 @@ export function RoiCalculator() {
             <p className="font-medium">Miesięczne koszty utrzymania</p>
             <dl className="mt-2 space-y-1">
               <Row label={`Platforma: ${platforms.find((p) => p.id === platform)!.name}`} value={fmtRange(platCost)} />
-              <Row label="API modelu AI (2–5 gr / uruchomienie)" value={fmtRange(aiCost)} />
+              <Row label="API modelu AI (ok. 0,5–1,25 centa / uruchomienie)" value={fmtRange(aiCost)} />
               <Row label="Razem narzędzia (średnio)" value={pln(monthlyCost)} strong />
               <Row label="Opieka i monitoring (opcja)" value="wycena indywidualna" />
             </dl>
             {platCost.note && <p className="mt-2 text-xs text-muted-foreground">{platCost.note}</p>}
+            <p className="mt-2 text-xs text-muted-foreground">Kwoty szacunkowe: plany są w USD lub EUR. {rateLabel(rates)}.</p>
           </div>
           <a href="#kontakt" className={buttonClass.primary}>Omówmy Twój wynik</a>
         </div>
@@ -158,7 +160,7 @@ export function RoiCalculator() {
           </table>
         </div>
         <p className="mt-3 text-xs text-muted-foreground">
-          Orientacyjne ceny z publicznych cenników (kurs ok. 4 zł/USD), mogą się zmienić. Zakładam natychmiastowy wyzwalacz
+          {priceNote(rates)} Zakładam natychmiastowy wyzwalacz
           (webhook, mailhook), więc puste sprawdzenia skrzynki nie zużywają kredytów. Własny serwer n8n wymaga też czasu na
           aktualizacje i kopie zapasowe.{" "}
           <a href="/realizacje#platformy" className="underline underline-offset-4">Porównanie platform: zalety i wady</a>

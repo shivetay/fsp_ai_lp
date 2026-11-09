@@ -61,3 +61,8 @@ Opisy przykładowych automatyzacji są w `docs/procesy/` (np. `leady-do-crm.md`)
 - `/branze` i `/branze/[slug]`: 9 branż (gabinety, salony beauty, restauracje, biura rachunkowe, nieruchomości, warsztaty, firmy budowlane, sklepy, szkoły i kursy).
 - Treści w `src/content/pages.ts`. Nowa podstrona = nowy obiekt w tablicy; trafia automatycznie do sitemap.
 - Każda podstrona ma własny tytuł, opis, canonical, okruszki oraz JSON-LD (BreadcrumbList, Service, FAQPage).
+
+## Ceny platform i kurs walut
+
+Cenniki platform (Make, n8n, Activepieces, Zapier) i API AI są w `src/content/platforms.ts`, w walucie dostawcy (USD / EUR).
+Na złote przeliczam je po kursie średnim NBP (tabela A, `src/lib/rates.ts`), odświeżanym co 12 h. Gdy API NBP nie odpowiada, strona używa kursu zapasowego (4 zł/USD, 4,3 zł/EUR) i pisze „kurs orientacyjny”.

@@ -1,7 +1,9 @@
-import { platforms } from "@/content/platforms";
+import { platforms, priceNote, rateLabel } from "@/content/platforms";
+import { getRates } from "@/lib/rates";
 
 // Opis platform automatyzacji: zalety, wady, koszty i dla kogo.
-export function PlatformComparison({ id = "platformy", muted = false }: { id?: string; muted?: boolean }) {
+export async function PlatformComparison({ id = "platformy", muted = false }: { id?: string; muted?: boolean }) {
+  const rates = await getRates();
   return (
     <section id={id} className={`scroll-mt-20 border-t border-border py-20 ${muted ? "bg-muted/40" : ""}`}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -11,6 +13,10 @@ export function PlatformComparison({ id = "platformy", muted = false }: { id?: s
           Ta sama automatyzacja może działać na różnych platformach. Różnią się sposobem liczenia kosztów, miejscem
           przechowywania danych i tym, ile możesz zmienić sam. Dobieram platformę do skali i budżetu firmy, a nie
           odwrotnie.
+        </p>
+        <p className="mt-4 max-w-3xl rounded-lg border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm">
+          Podane kwoty w złotówkach są szacunkowe. Platformy podają cenniki w USD lub EUR, więc realny koszt zależy od
+          kursu walut i bieżącego cennika dostawcy. Przeliczam po kursie: {rateLabel(rates)}.
         </p>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -30,7 +36,7 @@ export function PlatformComparison({ id = "platformy", muted = false }: { id?: s
                 </div>
                 <div className="rounded-lg bg-muted px-3 py-2">
                   <dt className="text-xs text-muted-foreground">Płatnie</dt>
-                  <dd className="mt-0.5">{p.paid}</dd>
+                  <dd className="mt-0.5">{p.paid(rates)}</dd>
                 </div>
               </dl>
 
@@ -89,8 +95,7 @@ export function PlatformComparison({ id = "platformy", muted = false }: { id?: s
             </li>
           </ul>
           <p className="mt-4 text-xs text-muted-foreground">
-            Ceny orientacyjne, na podstawie publicznych cenników (kurs ok. 4 zł/USD). Dostawcy je zmieniają, więc przed
-            ofertą zawsze sprawdzam aktualne. Konto na platformie zakładamy na Ciebie, więc to Ty jesteś właścicielem
+            {priceNote(rates)} Konto na platformie zakładamy na Ciebie, więc to Ty jesteś właścicielem
             automatyzacji.
           </p>
         </div>

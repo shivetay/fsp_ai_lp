@@ -11,8 +11,10 @@ import { Faq } from "@/components/faq";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { StructuredData } from "@/components/structured-data";
+import { getRates } from "@/lib/rates";
 
-export default function Home() {
+export default async function Home() {
+  const rates = await getRates();
   return (
     <>
       <StructuredData />
@@ -23,7 +25,7 @@ export default function Home() {
         <Services />
         <Processes />
         <Industries />
-        <RoiCalculator />
+        <RoiCalculator rates={rates} />
         <Process />
         <DemoSection />
         <Faq />

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, type DragEvent } from "react";
 import { blocks, kindMeta, presets, type Block, type BlockKind } from "@/content/workflow";
-import { aiCostPerRun, fmtRange, platformCost, platforms } from "@/content/platforms";
+import { aiCostPerRun, fmtRange, platformCost, platforms, rateLabel, type Rates } from "@/content/platforms";
 
 type Item = { uid: number; id: string };
 
@@ -12,7 +12,7 @@ const toItems = (ids: string[]): Item[] => ids.map((id) => ({ uid: uidSeq++, id 
 
 export const SCENARIO_KEY = "fsp-scenario";
 
-export function WorkflowBuilder() {
+export function WorkflowBuilder({ rates }: { rates: Rates }) {
   const [presetId, setPresetId] = useState(presets[0].id);
   const [items, setItems] = useState<Item[]>(() => toItems(presets[0].chain));
   const [runs, setRuns] = useState(presets[0].runsPerMonth);
@@ -98,7 +98,8 @@ export function WorkflowBuilder() {
   const minutesPerRun = chain.reduce((s, b) => s + b.minutes, 0);
   const hoursPerMonth = (minutesPerRun * runs) / 60;
   const hasAi = chain.some((b) => b.kind === "ai");
-  const aiCost = hasAi ? { min: runs * aiCostPerRun.min, max: runs * aiCostPerRun.max } : null;
+  const aiPerRun = aiCostPerRun(rates);
+  const aiCost = hasAi ? { min: runs * aiPerRun.min, max: runs * aiPerRun.max } : null;
 
   const simulate = async () => {
     if (running || !chain.length) return;
@@ -233,7 +234,7 @@ export function WorkflowBuilder() {
               {platforms.map((p) => (
                 <div key={p.id} className="flex justify-between gap-3">
                   <dt className="text-muted-foreground">{p.name.replace(" (własny serwer)", " (serwer)")}</dt>
-                  <dd className="shrink-0 font-mono">{chain.length ? fmtRange(platformCost(p.id, runs, chain.length)) : "–"}</dd>
+                  <dd className="shrink-0 font-mono">{chain.length ? fmtRange(platformCost(p.id, runs, chain.length, rates)) : "–"}</dd>
                 </div>
               ))}
               {aiCost && (
@@ -243,7 +244,8 @@ export function WorkflowBuilder() {
                 </div>
               )}
             </dl>
-            <a href="#platformy" className="mt-2 inline-block text-xs underline underline-offset-4">Czym się różnią platformy?</a>
+            <p className="mt-2 text-xs text-muted-foreground">Szacunkowo: plany są w USD lub EUR. {rateLabel(rates)}.</p>
+            <a href="#platformy" className="mt-1 inline-block text-xs underline underline-offset-4">Czym się różnią platformy?</a>
           </div>
 
           {warnings.length > 0 && (

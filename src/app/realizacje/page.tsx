@@ -5,6 +5,7 @@ import { CtaBlock, SubpageHero, SubpageLayout } from "@/components/subpage/layou
 import { Card } from "@/components/ui";
 import { industryPages } from "@/content/pages";
 import { PlatformComparison } from "@/components/platform-comparison";
+import { getRates } from "@/lib/rates";
 
 export const metadata: Metadata = {
   title: { absolute: "Przykładowe realizacje automatyzacji i AI | Wrocław" },
@@ -31,7 +32,8 @@ const booksySteps = [
   { title: "Dalsze kroki (opcja)", text: "SMS po wizycie, prośba o opinię Google, zapis w CRM, raport tygodniowy." },
 ];
 
-export default function RealizationsPage() {
+export default async function RealizationsPage() {
+  const rates = await getRates();
   return (
     <SubpageLayout crumbs={[{ name: "Realizacje", href: "/realizacje" }]}>
       <SubpageHero
@@ -45,7 +47,7 @@ export default function RealizationsPage() {
 
       <section id="kreator" className="scroll-mt-20 border-t border-border py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <WorkflowBuilder />
+          <WorkflowBuilder rates={rates} />
           <p className="mt-6 text-xs text-muted-foreground">
             To interaktywna symulacja. Prawdziwe wdrożenie działa w n8n, Make, Activepieces, Zapier lub w dedykowanym kodzie, na Twoich kontach i danych.
             Czas oszczędności to szacunek na podstawie typowych czasów ręcznej pracy.
