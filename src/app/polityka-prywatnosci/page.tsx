@@ -47,6 +47,9 @@ export default function PrivacyPage() {
             <ul>
               <li>Vercel Inc. (hosting strony),</li>
               <li>dostawca obsługi formularza i poczty e-mail (Resend lub Formspree),</li>
+              {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && (
+                <li>Cloudflare Inc. (Turnstile, ochrona formularza przed spamem i botami),</li>
+              )}
               <li>dostawca skrzynki e-mail, na którą trafiają wiadomości.</li>
             </ul>
             <p>

@@ -1,9 +1,18 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
+import Script from "next/script";
 import { buttonClass } from "./ui";
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+// Cloudflare Turnstile (opcjonalny): ustaw NEXT_PUBLIC_TURNSTILE_SITE_KEY i TURNSTILE_SECRET_KEY.
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+declare global {
+  interface Window {
+    turnstile?: { reset: (el?: string | HTMLElement) => void };
+  }
+}
 const ENDPOINT = FORMSPREE_ID ? `https://formspree.io/f/${FORMSPREE_ID}` : "/api/contact";
 
 type Status = "idle" | "sending" | "ok" | "error";
@@ -14,11 +23,15 @@ const input =
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const startedAt = useRef(0);
+  useEffect(() => {
+    startedAt.current = Date.now();
+  }, [status]);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form));
+    const data = { ...Object.fromEntries(new FormData(form)), _t: Date.now() - startedAt.current };
     setStatus("sending");
     setError("");
     try {
@@ -36,6 +49,7 @@ export function ContactForm() {
     } catch (err) {
       setStatus("error");
       setError(err instanceof Error ? err.message : "Nie udało się wysłać wiadomości.");
+      window.turnstile?.reset();
     }
   }
 
@@ -54,7 +68,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-4 rounded-xl border border-border bg-card p-6">
+    <form onSubmit={onSubmit} className="relative space-y-4 rounded-xl border border-border bg-card p-6">
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Imię i nazwisko" htmlFor="name">
           <input id="name" name="name" required maxLength={100} className={input} autoComplete="name" />
@@ -88,7 +102,16 @@ export function ContactForm() {
           placeholder="Czym zajmuje się Twoja firma i co zabiera Wam najwięcej czasu?" />
       </Field>
       {/* Honeypot przeciw botom: ukryte pole, ludzie go nie wypełnią. */}
-      <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
+      <div aria-hidden className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+        <label htmlFor="website">Strona WWW</label>
+        <input id="website" type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
+      </div>
+      {TURNSTILE_SITE_KEY && (
+        <>
+          <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />
+          <div className="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-language="pl" data-theme="auto" />
+        </>
+      )}
       <label className="flex items-start gap-2 text-xs text-muted-foreground">
         <input type="checkbox" name="consent" value="tak" required className="mt-0.5 h-4 w-4 shrink-0 accent-[var(--primary)]" />
         <span>
