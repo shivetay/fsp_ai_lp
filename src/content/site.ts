@@ -192,5 +192,4 @@ export const roiDefaults = {
   setupCost: 4000,
   runsPerMonth: 150, // ile razy miesięcznie uruchamia się automatyzacja
   steps: 5, // ile kroków ma jeden przepływ
-  careCost: 150, // opieka i monitoring miesięcznie
 };

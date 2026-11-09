@@ -21,7 +21,6 @@ const FIELDS: { key: Key; label: string; hint: string; min: number; max: number;
   { key: "setupCost", label: "Jednorazowy koszt wdrożenia", hint: "Przykładowa wartość, dokładną podam po analizie", min: 500, max: 30000, step: 500, unit: "zł" },
   { key: "runsPerMonth", label: "Uruchomienia automatyzacji / mies.", hint: "Np. liczba zapytań, wizyt albo faktur w miesiącu", min: 10, max: 5000, step: 10, unit: "×" },
   { key: "steps", label: "Kroki w jednym przepływie", hint: "Wyzwalacz, AI i akcje. Typowo 4–8", min: 2, max: 15, step: 1, unit: "" },
-  { key: "careCost", label: "Opieka i monitoring / mies.", hint: "Abonament wsparcia, 0 jeśli bez opieki", min: 0, max: 1500, step: 50, unit: "zł" },
 ];
 
 const mid = (r: { min: number; max: number }) => (r.min + r.max) / 2;
@@ -37,7 +36,7 @@ export function RoiCalculator() {
   const cheapest = Math.min(...comparison.map((c) => mid(c.cost)));
   const platCost = platformCost(platform, v.runsPerMonth, v.steps);
   const aiCost = { min: v.runsPerMonth * aiCostPerRun.min, max: v.runsPerMonth * aiCostPerRun.max };
-  const monthlyCost = mid(platCost) + mid(aiCost) + v.careCost;
+  const monthlyCost = mid(platCost) + mid(aiCost);
   const netMonthly = monthlySavings - monthlyCost;
   const firstYear = netMonthly * 12 - v.setupCost;
   const roi = v.setupCost > 0 ? (firstYear / v.setupCost) * 100 : 0;
@@ -115,8 +114,8 @@ export function RoiCalculator() {
             <dl className="mt-2 space-y-1">
               <Row label={`Platforma: ${platforms.find((p) => p.id === platform)!.name}`} value={fmtRange(platCost)} />
               <Row label="API modelu AI (2–5 gr / uruchomienie)" value={fmtRange(aiCost)} />
-              <Row label="Opieka i monitoring" value={pln(v.careCost)} />
-              <Row label="Razem (średnio)" value={pln(monthlyCost)} strong />
+              <Row label="Razem narzędzia (średnio)" value={pln(monthlyCost)} strong />
+              <Row label="Opieka i monitoring (opcja)" value="wycena indywidualna" />
             </dl>
             {platCost.note && <p className="mt-2 text-xs text-muted-foreground">{platCost.note}</p>}
           </div>
@@ -179,8 +178,8 @@ export function RoiCalculator() {
           <h3 className="font-semibold">Jak liczę?</h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
             Oszczędność = osoby × godziny tygodniowo × 4,33 tyg. × % automatyzacji × koszt godziny.
-            Od oszczędności odejmuję koszty miesięczne: platformę (z cennika dla Twojej liczby uruchomień i kroków),
-            API modelu AI i opiekę. Od wyniku za 12 miesięcy odejmuję koszt wdrożenia.
+            Od oszczędności odejmuję koszty miesięczne: platformę (z cennika dla Twojej liczby uruchomień i kroków)
+            i API modelu AI. Opiekę wyceniam indywidualnie, więc nie ma jej w wyniku. Od wyniku za 12 miesięcy odejmuję koszt wdrożenia.
             ROI = zysk netto ÷ koszt wdrożenia.
           </p>
         </div>
