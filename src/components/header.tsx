@@ -10,7 +10,10 @@ export function Header() {
           <span className="grid h-8 w-8 place-items-center rounded-md bg-primary font-mono text-xs text-primary-foreground">
             {site.brand}
           </span>
-          <span className="hidden sm:inline">{site.name}</span>
+          <span className="flex flex-col leading-tight">
+            <span>{site.name}</span>
+            <span className="text-xs font-normal text-muted-foreground">{site.brandTag}</span>
+          </span>
         </a>
         <nav className="hidden items-center gap-6 text-sm text-muted-foreground lg:flex">
           {nav.map((n) => (

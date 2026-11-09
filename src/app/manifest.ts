@@ -4,8 +4,8 @@ import { seo } from "@/lib/seo";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${site.brand} ${site.name}`,
-    short_name: site.brand,
+    name: site.siteName,
+    short_name: site.name,
     description: seo.description,
     start_url: "/",
     display: "browser",

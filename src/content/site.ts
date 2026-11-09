@@ -1,7 +1,9 @@
 // Cała treść strony w jednym miejscu. Edytuj tutaj, komponenty tylko ją renderują.
 
 export const site = {
-  brand: "FSP",
+  brand: "ŁD", // monogram w logo
+  siteName: "Łukasz Dawidowicz – AI i automatyzacje", // nazwa witryny dla Google i social mediów
+  brandTag: "AI i automatyzacje",
   name: "Łukasz Dawidowicz",
   role: "Wdrożenia AI i automatyzacja procesów dla małych firm",
   tagline:

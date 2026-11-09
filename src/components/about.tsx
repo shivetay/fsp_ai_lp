@@ -13,7 +13,7 @@ export function About() {
             ))}
           </div>
           <p className="mt-6 font-medium">
-            {site.name} <span className="font-normal text-muted-foreground">· {site.brand}</span>
+            {site.name} <span className="font-normal text-muted-foreground">· {site.brandTag}</span>
           </p>
         </div>
         <div className="space-y-6">

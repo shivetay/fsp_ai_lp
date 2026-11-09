@@ -21,7 +21,10 @@ export default async function OgImage() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 72, height: 72, borderRadius: 14, background: "#fafafa", color: "#0a0a0a", fontSize: 26, fontWeight: 600 }}>
             {site.brand}
           </div>
-          <div style={{ fontSize: 32, fontWeight: 600 }}>{site.name}</div>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ fontSize: 32, fontWeight: 600 }}>{site.name}</div>
+            <div style={{ fontSize: 24, color: "#a3a3a3" }}>{site.brandTag}</div>
+          </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <div style={{ fontSize: 76, fontWeight: 600, lineHeight: 1.05, letterSpacing: -2 }}>

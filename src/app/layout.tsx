@@ -8,10 +8,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: seo.title, template: `%s | ${site.brand} ${site.name}` },
+  title: { default: seo.title, template: `%s | ${site.name}` },
   description: seo.description,
   keywords: seo.keywords,
   authors: [{ name: site.name, url: siteUrl }],
+  applicationName: site.siteName,
   creator: site.name,
   publisher: site.company.legalName,
   alternates: { canonical: "/" },
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: seo.locale,
     url: "/",
-    siteName: `${site.brand} ${site.name}`,
+    siteName: site.siteName,
     title: seo.shortTitle,
     description: seo.description,
   },
