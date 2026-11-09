@@ -58,7 +58,7 @@ export const stack = [
   { group: "Backend", items: ["Node.js", "Express"] },
   { group: "Testing", items: ["Jest", "Playwright", "Cypress"] },
   { group: "Database", items: ["MongoDB", "PostgreSQL"] },
-  { group: "AI i automatyzacje", items: ["Claude", "OpenAI", "RAG", "n8n", "Make", "Zapier"] },
+  { group: "AI i automatyzacje", items: ["Claude", "OpenAI", "RAG", "n8n", "Make", "Activepieces", "Zapier"] },
 ];
 
 export const services = [
@@ -80,7 +80,7 @@ export const services = [
     lead: "Połączę Twoje narzędzia tak, żeby dane przepływały same.",
     points: [
       "Integracja poczty, kalendarza, CRM, arkuszy i systemu faktur",
-      "Przepływy w n8n, Make lub Zapier albo dedykowany kod",
+      "Przepływy w n8n, Make, Activepieces lub Zapier albo dedykowany kod",
       "Automatyczne przypomnienia, raporty i powiadomienia",
       "Koniec z przepisywaniem danych między programami",
       "Monitoring i opieka po wdrożeniu",
@@ -167,7 +167,7 @@ export const faq = [
   },
   {
     q: "Ile to kosztuje?",
-    a: "Proste automaty to koszt rzędu kilkuset złotych, większe wdrożenia AI wyceniam po analizie. Zawsze dostajesz stałą cenę przed startem. Dochodzą niewielkie miesięczne koszty narzędzi, które z góry wyliczam.",
+    a: "Proste automaty to koszt rzędu kilkuset złotych, większe wdrożenia AI wyceniam po analizie. Zawsze dostajesz stałą cenę przed startem. Dochodzą niewielkie miesięczne koszty platformy (Make, n8n lub Activepieces, zwykle 0–200 zł) i API modelu AI (zwykle kilka do kilkunastu złotych). Wszystkie wyliczam z góry, a kalkulator ROI pokazuje różnice między platformami.",
   },
   {
     q: "Ile trwa wdrożenie?",
@@ -190,5 +190,7 @@ export const roiDefaults = {
   hourlyCost: 60,
   automationPct: 60,
   setupCost: 4000,
-  monthlyCost: 200,
+  runsPerMonth: 150, // ile razy miesięcznie uruchamia się automatyzacja
+  steps: 5, // ile kroków ma jeden przepływ
+  careCost: 150, // opieka i monitoring miesięcznie
 };

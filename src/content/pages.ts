@@ -66,11 +66,11 @@ export const servicePages: ServicePage[] = [
     name: "Automatyzacja procesów",
     title: "Automatyzacja procesów w firmie | Wrocław, Dolny Śląsk",
     description:
-      "Automatyzacja procesów biznesowych dla małych firm we Wrocławiu: integracja poczty, kalendarza, CRM, arkuszy i faktur w n8n, Make lub Zapier. Mniej ręcznej pracy, mniej błędów.",
+      "Automatyzacja procesów biznesowych dla małych firm we Wrocławiu: integracja poczty, kalendarza, CRM, arkuszy i faktur w n8n, Make, Activepieces lub Zapier. Mniej ręcznej pracy, mniej błędów.",
     h1: "Automatyzacja procesów dla małych firm we Wrocławiu",
     intro: [
       "W każdej firmie są zadania, które ktoś robi ręcznie po raz setny: przepisywanie danych z maila do arkusza, wysyłanie przypomnień, przygotowywanie raportu na koniec tygodnia.",
-      "Łączę Twoje narzędzia tak, żeby dane przepływały między nimi same. Używam n8n, Make lub Zapier, a tam, gdzie gotowe narzędzia nie wystarczają, piszę dedykowany kod.",
+      "Łączę Twoje narzędzia tak, żeby dane przepływały między nimi same. Używam n8n, Make, Activepieces lub Zapier, a tam, gdzie gotowe narzędzia nie wystarczają, piszę dedykowany kod.",
     ],
     includes: [
       { title: "Integracje narzędzi", text: "Poczta, kalendarz, CRM, Google Sheets, Excel, systemy faktur, sklep internetowy, formularze." },
@@ -88,7 +88,7 @@ export const servicePages: ServicePage[] = [
     forWho:
       "Dla firm, w których ktoś codziennie traci godzinę lub dwie na przepisywanie danych, pilnowanie terminów i kopiowanie informacji między programami.",
     faq: [
-      { q: "Jakich narzędzi używasz do automatyzacji?", a: "Najczęściej n8n (można go postawić na własnym serwerze, więc dane zostają u Ciebie), Make i Zapier. Wybór zależy od Twoich narzędzi, budżetu i wymagań dotyczących danych." },
+      { q: "Jakich narzędzi używasz do automatyzacji?", a: "Najczęściej n8n (na własnym serwerze, bez limitu wykonań, dane zostają u Ciebie), Make (najtańszy hostowany na start) i Activepieces (prosty, open source). Zapier, gdy firma już go używa. Wybór zależy od liczby uruchomień, budżetu i wymagań dotyczących danych, a porównanie kosztów pokazuje kalkulator ROI." },
       { q: "Czy muszę zmieniać programy, których używam?", a: "Zwykle nie. Automatyzacja łączy narzędzia, które już masz. Zmianę proponuję tylko wtedy, gdy obecne narzędzie naprawdę blokuje usprawnienie." },
       { q: "Co jeśli zmieni się mój proces?", a: "Automaty da się łatwo modyfikować. W ramach wsparcia dostosowuję je do zmian w firmie." },
     ],

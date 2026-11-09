@@ -4,6 +4,7 @@ import { WorkflowBuilder } from "@/components/workflow-builder";
 import { CtaBlock, SubpageHero, SubpageLayout } from "@/components/subpage/layout";
 import { Card } from "@/components/ui";
 import { industryPages } from "@/content/pages";
+import { PlatformComparison } from "@/components/platform-comparison";
 
 export const metadata: Metadata = {
   title: { absolute: "Przykładowe realizacje automatyzacji i AI | Wrocław" },
@@ -46,7 +47,7 @@ export default function RealizationsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <WorkflowBuilder />
           <p className="mt-6 text-xs text-muted-foreground">
-            To interaktywna symulacja. Prawdziwe wdrożenie działa w n8n, Make, Zapier lub w dedykowanym kodzie, na Twoich kontach i danych.
+            To interaktywna symulacja. Prawdziwe wdrożenie działa w n8n, Make, Activepieces, Zapier lub w dedykowanym kodzie, na Twoich kontach i danych.
             Czas oszczędności to szacunek na podstawie typowych czasów ręcznej pracy.
           </p>
         </div>
@@ -141,12 +142,14 @@ export default function RealizationsPage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-muted/40 py-20">
+      <PlatformComparison muted />
+
+      <section className="border-t border-border py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="text-3xl font-semibold tracking-tight">Scenariusze dla branż</h2>
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {industryPages.map((i) => (
-              <div key={i.slug} className="rounded-xl border border-border bg-background p-5">
+              <div key={i.slug} className="rounded-xl border border-border bg-card p-5">
                 <h3 className="font-semibold">{i.name}</h3>
                 <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
                   <Link href={`/realizacje?scenariusz=${i.slug}#kreator`} className="underline underline-offset-4">Schemat w kreatorze</Link>

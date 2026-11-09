@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { industryPages, servicePages } from "@/content/pages";
 import { workSteps } from "@/content/site";
 import { Card } from "@/components/ui";
+import { PlatformComparison } from "@/components/platform-comparison";
 import { CtaBlock, SubpageFaq, SubpageHero, SubpageLayout, faqLd } from "@/components/subpage/layout";
 import { serviceLd } from "@/lib/business";
 import { siteUrl } from "@/lib/seo";
@@ -94,6 +95,8 @@ export default async function ServicePage({ params }: Props) {
           </ol>
         </div>
       </section>
+
+      {page.slug === "automatyzacja-procesow" && <PlatformComparison />}
 
       <section className="border-t border-border py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">

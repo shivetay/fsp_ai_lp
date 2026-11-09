@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, type DragEvent } from "react";
 import { blocks, kindMeta, presets, type Block, type BlockKind } from "@/content/workflow";
+import { aiCostPerRun, fmtRange, platformCost, platforms } from "@/content/platforms";
 
 type Item = { uid: number; id: string };
 
@@ -96,6 +97,8 @@ export function WorkflowBuilder() {
 
   const minutesPerRun = chain.reduce((s, b) => s + b.minutes, 0);
   const hoursPerMonth = (minutesPerRun * runs) / 60;
+  const hasAi = chain.some((b) => b.kind === "ai");
+  const aiCost = hasAi ? { min: runs * aiCostPerRun.min, max: runs * aiCostPerRun.max } : null;
 
   const simulate = async () => {
     if (running || !chain.length) return;
@@ -221,6 +224,26 @@ export function WorkflowBuilder() {
             <label className="mt-4 block text-xs opacity-80" htmlFor="runs">Uruchomień miesięcznie: {runs}</label>
             <input id="runs" type="range" min={1} max={500} value={runs} onChange={(e) => setRuns(Number(e.target.value))}
               className="mt-1 w-full accent-[var(--primary-foreground)]" />
+          </div>
+
+          <div className="rounded-xl border border-border bg-card p-4 text-sm">
+            <p className="font-medium">Koszt platformy / mies.</p>
+            <p className="text-xs text-muted-foreground">{runs} uruchomień × {chain.length} kroków</p>
+            <dl className="mt-2 space-y-1">
+              {platforms.map((p) => (
+                <div key={p.id} className="flex justify-between gap-3">
+                  <dt className="text-muted-foreground">{p.name.replace(" (własny serwer)", " (serwer)")}</dt>
+                  <dd className="shrink-0 font-mono">{chain.length ? fmtRange(platformCost(p.id, runs, chain.length)) : "–"}</dd>
+                </div>
+              ))}
+              {aiCost && (
+                <div className="flex justify-between gap-3 border-t border-border pt-1">
+                  <dt className="text-muted-foreground">+ API modelu AI</dt>
+                  <dd className="shrink-0 font-mono">{fmtRange(aiCost)}</dd>
+                </div>
+              )}
+            </dl>
+            <a href="#platformy" className="mt-2 inline-block text-xs underline underline-offset-4">Czym się różnią platformy?</a>
           </div>
 
           {warnings.length > 0 && (
