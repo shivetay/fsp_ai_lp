@@ -7,7 +7,7 @@ export const site = {
   tagline:
     "Pomagam lokalnym firmom z Wrocławia i Dolnego Śląska wejść w świat AI bez ryzyka i bez żargonu. Automatyzuję powtarzalną pracę, żeby Ty i Twój zespół mieli czas na klientów.",
   // Dane kontaktowe: puste pole = element się nie wyświetla.
-  email: "", // np. "kontakt@twojadomena.pl"
+  email: "kontakt@fsplukaszdawidowicz.pl",
   phone: "", // np. "+48 600 000 000"
   location: "Wrocław i Dolny Śląsk, zdalnie w całej Polsce",
   city: "Wrocław",
