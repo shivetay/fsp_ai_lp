@@ -26,6 +26,7 @@ export const nav = [
   { href: "#procesy", label: "Procesy" },
   { href: "#branze", label: "Branże" },
   { href: "#roi", label: "Kalkulator ROI" },
+  { href: "realizacje", label: "Realizacje" },
   { href: "#jak-pracuje", label: "Jak pracuję" },
   { href: "#faq", label: "FAQ" },
 ];

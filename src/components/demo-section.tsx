@@ -21,6 +21,13 @@ export function DemoSection() {
           <ActiveDemo />
         )}
       </div>
+      <p className="mt-6 text-sm text-muted-foreground">
+        Chcesz zobaczyć więcej?{" "}
+        <a href="/realizacje" className="font-medium text-foreground underline underline-offset-4">
+          Zbuduj własną automatyzację z bloków
+        </a>{" "}
+        na przykładach z różnych branż.
+      </p>
     </Section>
   );
 }

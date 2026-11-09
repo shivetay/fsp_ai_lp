@@ -83,6 +83,9 @@ export default async function IndustryPage({ params }: Props) {
               <Link href="/#roi" className="mt-3 inline-block text-sm underline underline-offset-4 opacity-80 hover:opacity-100">
                 Policz dla swojej firmy →
               </Link>
+              <Link href={`/realizacje?scenariusz=${page.slug}#kreator`} className="mt-1 block text-sm underline underline-offset-4 opacity-80 hover:opacity-100">
+                Zobacz przykładowy schemat →
+              </Link>
             </div>
           </div>
         </div>

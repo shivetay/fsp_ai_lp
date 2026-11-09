@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import Script from "next/script";
+import { SCENARIO_KEY } from "./workflow-builder";
 import { buttonClass } from "./ui";
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID;
@@ -27,6 +28,17 @@ export function ContactForm() {
   useEffect(() => {
     startedAt.current = Date.now();
   }, [status]);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+  // Treść scenariusza z kreatora (/realizacje) wpisuje się do wiadomości.
+  useEffect(() => {
+    try {
+      const text = sessionStorage.getItem(SCENARIO_KEY);
+      if (text && messageRef.current && !messageRef.current.value) {
+        messageRef.current.value = text;
+        sessionStorage.removeItem(SCENARIO_KEY);
+      }
+    } catch {}
+  }, []);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -98,7 +110,7 @@ export function ContactForm() {
         </Field>
       </div>
       <Field label="Wiadomość" htmlFor="message">
-        <textarea id="message" name="message" required rows={5} maxLength={5000} className={input}
+        <textarea ref={messageRef} id="message" name="message" required rows={5} maxLength={5000} className={input}
           placeholder="Czym zajmuje się Twoja firma i co zabiera Wam najwięcej czasu?" />
       </Field>
       {/* Honeypot przeciw botom: ukryte pole, ludzie go nie wypełnią. */}
