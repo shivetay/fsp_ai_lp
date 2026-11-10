@@ -37,8 +37,8 @@ export const servicePages: ServicePage[] = [
       "Wdrożenie sztucznej inteligencji w małej firmie we Wrocławiu: asystenci AI, automatyczne odpowiedzi na zapytania, odczyt dokumentów, generowanie ofert. Bezpłatna konsultacja.",
     h1: "Wdrożenie AI w małej firmie we Wrocławiu",
     intro: [
-      "Sztuczna inteligencja przestała być zabawką dla korporacji. Dziś mała firma może mieć asystenta, który odpowiada klientom o każdej porze, czyta faktury i przygotowuje oferty według Twojego cennika.",
-      "Wdrażam AI tak, żeby działało na Twoich danych, w narzędziach, których już używasz, i żeby zespół umiał z niego korzystać od pierwszego dnia. Bez żargonu i bez kupowania drogich licencji na zapas.",
+      "AI dobrze radzi sobie z powtarzalną pracą na tekście: czytaniem maili, wyciąganiem danych z faktur, pierwszymi wersjami odpowiedzi i ofert. W małej firmie to często kilka godzin tygodniowo.",
+      "Zaczynamy od jednego zadania. Podłączam AI do narzędzi, których już używasz, testujemy je na Twoich danych, a Ty decydujesz, co idzie do klienta automatycznie, a co wymaga Twojej akceptacji.",
     ],
     includes: [
       { title: "Asystent AI dla klientów", text: "Na stronie, w Messengerze lub WhatsAppie. Zna Twoją ofertę, cennik i godziny otwarcia, a trudniejsze pytania przekazuje do Ciebie." },
@@ -69,8 +69,8 @@ export const servicePages: ServicePage[] = [
       "Automatyzacja procesów biznesowych dla małych firm we Wrocławiu: integracja poczty, kalendarza, CRM, arkuszy i faktur w n8n, Make, Activepieces lub Zapier. Mniej ręcznej pracy, mniej błędów.",
     h1: "Automatyzacja procesów dla małych firm we Wrocławiu",
     intro: [
-      "W każdej firmie są zadania, które ktoś robi ręcznie po raz setny: przepisywanie danych z maila do arkusza, wysyłanie przypomnień, przygotowywanie raportu na koniec tygodnia.",
-      "Łączę Twoje narzędzia tak, żeby dane przepływały między nimi same. Używam n8n, Make, Activepieces lub Zapiera, a tam, gdzie gotowe narzędzia nie wystarczają, piszę dedykowany kod.",
+      "W większości firm są zadania, które ktoś regularnie robi ręcznie: przepisuje dane z maila do arkusza, wysyła przypomnienia, zbiera liczby do raportu na koniec tygodnia.",
+      "Łączę narzędzia, których już używasz, tak żeby te kroki działy się same. Najczęściej wystarczy gotowa platforma (n8n, Make, Activepieces lub Zapier). Własny kod piszę tylko wtedy, gdy ona nie wystarcza.",
     ],
     includes: [
       { title: "Integracje narzędzi", text: "Poczta, kalendarz, CRM, Google Sheets, Excel, systemy faktur, sklep internetowy, formularze." },
@@ -101,11 +101,11 @@ export const servicePages: ServicePage[] = [
       "Opieka nad automatyzacjami i rozwiązaniami AI w firmie: monitoring, poprawki po zmianach w API, optymalizacja kosztów i rozwój. Abonament dla małych firm z Wrocławia i Dolnego Śląska.",
     h1: "Wsparcie i utrzymanie automatyzacji oraz AI",
     intro: [
-      "Automat, który działa dziś, jutro może przestać, bo zewnętrzne narzędzie zmieniło API, wygasł token albo zmienił się Twój proces. Dlatego wdrożenie to dopiero początek.",
-      "W ramach wsparcia pilnuję, żeby Twoje automatyzacje i rozwiązania AI działały stabilnie, kosztowały tyle, ile powinny, i rosły razem z firmą.",
+      "Automatyzacja może przestać działać bez żadnej zmiany po Twojej stronie: zewnętrzne narzędzie zmienia API, wygasa dostęp albo zmienia się sposób pracy w firmie.",
+      "W ramach wsparcia sprawdzam, czy wszystko działa, naprawiam to, co się zepsuło, i pilnuję kosztów AI. Gdy pojawia się nowa potrzeba, dokładam kolejną automatyzację.",
     ],
     includes: [
-      { title: "Monitoring i alerty", text: "Wiem o błędzie, zanim zauważy go Twój zespół lub klient." },
+      { title: "Monitoring i alerty", text: "Dostaję powiadomienie o błędzie i zwykle naprawiam go, zanim ktoś go zauważy." },
       { title: "Szybkie poprawki", text: "Naprawiam automaty po zmianach w zewnętrznych narzędziach i API." },
       { title: "Kontrola kosztów AI", text: "Pilnuję zużycia API i dobieram tańsze modele tam, gdzie jakość na tym nie cierpi." },
       { title: "Optymalizacja", text: "Usprawniam działające automaty na podstawie tego, jak naprawdę są używane." },

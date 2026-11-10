@@ -8,7 +8,7 @@ export function Services() {
       <SectionHeading
         eyebrow="Usługi"
         title="W czym mogę pomóc"
-        lead="Wdrażam AI tam, gdzie oszczędza czas, automatyzuję procesy tam, gdzie ktoś robi to samo po raz setny, i dbam, żeby wszystko działało także po wdrożeniu."
+        lead="Zaczynamy od jednego zadania, które zabiera Ci najwięcej czasu. Gdy działa i widać efekt, dokładamy kolejne."
       />
       <div className="grid gap-4 lg:grid-cols-3">
         {services.map((s, i) => (
