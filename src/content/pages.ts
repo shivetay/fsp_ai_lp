@@ -70,7 +70,7 @@ export const servicePages: ServicePage[] = [
     h1: "Automatyzacja procesów dla małych firm we Wrocławiu",
     intro: [
       "W każdej firmie są zadania, które ktoś robi ręcznie po raz setny: przepisywanie danych z maila do arkusza, wysyłanie przypomnień, przygotowywanie raportu na koniec tygodnia.",
-      "Łączę Twoje narzędzia tak, żeby dane przepływały między nimi same. Używam n8n, Make, Activepieces lub Zapier, a tam, gdzie gotowe narzędzia nie wystarczają, piszę dedykowany kod.",
+      "Łączę Twoje narzędzia tak, żeby dane przepływały między nimi same. Używam n8n, Make, Activepieces lub Zapiera, a tam, gdzie gotowe narzędzia nie wystarczają, piszę dedykowany kod.",
     ],
     includes: [
       { title: "Integracje narzędzi", text: "Poczta, kalendarz, CRM, Google Sheets, Excel, systemy faktur, sklep internetowy, formularze." },
@@ -90,7 +90,7 @@ export const servicePages: ServicePage[] = [
     faq: [
       { q: "Jakich narzędzi używasz do automatyzacji?", a: "Najczęściej n8n (na własnym serwerze, bez limitu wykonań, dane zostają u Ciebie), Make (najtańszy hostowany na start) i Activepieces (prosty, open source). Zapier, gdy firma już go używa. Wybór zależy od liczby uruchomień, budżetu i wymagań dotyczących danych, a porównanie kosztów pokazuje kalkulator ROI." },
       { q: "Czy muszę zmieniać programy, których używam?", a: "Zwykle nie. Automatyzacja łączy narzędzia, które już masz. Zmianę proponuję tylko wtedy, gdy obecne narzędzie naprawdę blokuje usprawnienie." },
-      { q: "Co jeśli zmieni się mój proces?", a: "Automaty da się łatwo modyfikować. W ramach wsparcia dostosowuję je do zmian w firmie." },
+      { q: "Co, jeśli zmieni się mój proces?", a: "Automaty da się łatwo modyfikować. W ramach wsparcia dostosowuję je do zmian w firmie." },
     ],
   },
   {
@@ -200,7 +200,7 @@ export const industryPages: IndustryPage[] = [
     ],
     automations: [
       { title: "Rezerwacje stolików", text: "Rezerwacja online z potwierdzeniem i przypomnieniem. Mniej pustych stolików." },
-      { title: "Asystent AI na wiadomości", text: "Odpowiada o menu, alergenach, godzinach i dojeździe, przyjmuje wstępne zamówienia." },
+      { title: "Asystent AI na wiadomości", text: "Odpowiada na pytania o menu, alergeny, godziny otwarcia i dojazd, przyjmuje wstępne zamówienia." },
       { title: "Zamówienia w jednym miejscu", text: "Zamówienia z maila, telefonu i formularza trafiają na jedną listę dla kuchni." },
       { title: "Raport tygodniowy", text: "Podsumowanie rezerwacji i zamówień przychodzi na maila w poniedziałek rano." },
     ],
@@ -261,7 +261,7 @@ export const industryPages: IndustryPage[] = [
     scenario: { text: "Agent spędza ok. 2 godziny dziennie na odpisywaniu na zapytania i pisaniu opisów.", hours: 40 },
     faq: [
       { q: "Czy opisy z AI nie będą brzmiały sztucznie?", a: "AI pisze na podstawie Twoich wcześniejszych opisów i stylu. Każdy opis i tak przechodzi przez Ciebie przed publikacją." },
-      { q: "Czy da się to połączyć z moim CRM?", a: "Większość CRM dla nieruchomości ma API lub import. Sprawdzę to na konsultacji." },
+      { q: "Czy da się to połączyć z moim CRM?", a: "Większość systemów CRM dla nieruchomości ma API lub import. Sprawdzę to na konsultacji." },
     ],
   },
   {
@@ -335,7 +335,7 @@ export const industryPages: IndustryPage[] = [
     ],
     automations: [
       { title: "Zamówienia do faktur i magazynu", text: "Nowe zamówienie automatycznie tworzy fakturę i aktualizuje stan magazynu." },
-      { title: "Asystent obsługi klienta", text: "Odpowiada o dostawie, zwrotach i statusie zamówienia, trudniejsze sprawy przekazuje do Ciebie." },
+      { title: "Asystent obsługi klienta", text: "Odpowiada na pytania o dostawę, zwroty i status zamówienia, trudniejsze sprawy przekazuje do Ciebie." },
       { title: "Opisy produktów", text: "AI przygotowuje opisy i tytuły zoptymalizowane pod wyszukiwarkę." },
       { title: "Raporty sprzedaży", text: "Cotygodniowe podsumowanie bestsellerów, marż i stanów magazynowych." },
     ],
@@ -363,7 +363,7 @@ export const industryPages: IndustryPage[] = [
     automations: [
       { title: "Zapisy online", text: "Formularz zapisu tworzy kursanta na liście grupy i wysyła potwierdzenie." },
       { title: "Płatności i przypomnienia", text: "Automatyczne przypomnienia o ratach i potwierdzenia wpłat." },
-      { title: "Asystent dla kursantów", text: "Odpowiada o terminach, poziomach i cenach, pomaga dobrać kurs." },
+      { title: "Asystent dla kursantów", text: "Odpowiada na pytania o terminy, poziomy i ceny, pomaga dobrać kurs." },
       { title: "Materiały po zajęciach", text: "Materiały i zadania wysyłane do grupy automatycznie po lekcji." },
     ],
     scenario: { text: "Administracja zapisami i płatnościami zajmuje ok. 1 godzinę dziennie.", hours: 20 },

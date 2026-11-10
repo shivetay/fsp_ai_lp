@@ -7,7 +7,7 @@ export const site = {
   name: "Łukasz Dawidowicz",
   role: "Wdrożenia AI i automatyzacja procesów dla małych firm",
   tagline:
-    "Pomagam lokalnym firmom z Wrocławia i Dolnego Śląska wejść w świat AI bez ryzyka i bez żargonu. Automatyzuję powtarzalną pracę, żeby Ty i Twój zespół mieli czas na klientów.",
+    "Pomagam lokalnym firmom z Wrocławia i Dolnego Śląska wejść w świat AI bez ryzyka i bez żargonu. Automatyzuję powtarzalną pracę, żebyście Ty i Twój zespół mieli więcej czasu dla klientów.",
   // Dane kontaktowe: puste pole = element się nie wyświetla.
   email: "kontakt@fsplukaszdawidowicz.pl",
   phone: "", // np. "+48 600 000 000"
@@ -173,14 +173,14 @@ export const faq = [
   },
   {
     q: "Ile trwa wdrożenie?",
-    a: "Prototyp zwykle w 3 do 7 dni roboczych, pełne wdrożenie w 2 do 4 tygodnie, zależnie od liczby narzędzi do połączenia.",
+    a: "Prototyp zwykle w 3 do 7 dni roboczych, pełne wdrożenie w 2 do 4 tygodni, zależnie od liczby narzędzi do połączenia.",
   },
   {
     q: "Czy moje dane i dane klientów są bezpieczne?",
     a: "Tak. Pracuję na kontach należących do Ciebie, podpisuję NDA i umowę powierzenia danych. Dobieram narzędzia zgodne z RODO.",
   },
   {
-    q: "Co jeśli coś przestanie działać?",
+    q: "Co, jeśli coś przestanie działać?",
     a: "W ramach opieki monitoruję automaty i naprawiam problemy, zanim zauważy je Twój zespół.",
   },
 ];
