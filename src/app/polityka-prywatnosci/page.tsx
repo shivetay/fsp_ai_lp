@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/polityka-prywatnosci" },
 };
 
-const updated = "8 listopada 2026";
+const updated = "12 listopada 2026";
 
 export default function PrivacyPage() {
   const contact = site.email ? `e-mailowo: ${site.email}` : "przez formularz kontaktowy na stronie";
@@ -42,7 +42,23 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-3">
-            <h2>3. Komu przekazuję dane</h2>
+            <h2>3. Kontakt z firmami z publicznych katalogów</h2>
+            <p>
+              Mogę napisać do firmy, której adres e-mail jest publicznie dostępny (np. na jej stronie internetowej, w CEIDG
+              lub w katalogach firm), z jednym pytaniem: czy zgadza się na przesłanie informacji o moich usługach. Taka
+              wiadomość nie zawiera oferty. Ofertę wysyłam dopiero po otrzymaniu zgody.
+            </p>
+            <ul>
+              <li>dane: nazwa firmy, branża, miejscowość, firmowy adres e-mail i telefon oraz źródło, z którego je pozyskałem,</li>
+              <li>podstawa: prawnie uzasadniony interes w nawiązaniu kontaktu biznesowego (art. 6 ust. 1 lit. f RODO), a po wyrażeniu zgody na informacje handlowe – zgoda (art. 6 ust. 1 lit. a RODO i art. 398 Prawa komunikacji elektronicznej),</li>
+              <li>okres: jeśli firma nie odpowie albo odmówi, usuwam jej dane najpóźniej po 30 dniach; zostawiam tylko sam adres e-mail na liście „nie kontaktować”, żeby nie napisać ponownie,</li>
+              <li>zgodę możesz wycofać w każdej chwili, odpisując „wypisz” lub „usuń” – bez wpływu na zgodność z prawem wcześniejszego kontaktu,</li>
+              <li>wiadomości wysyłam przez Resend (Resend Inc., USA), na zasadach opisanych w punkcie 4.</li>
+            </ul>
+          </section>
+
+          <section className="space-y-3">
+            <h2>4. Komu przekazuję dane</h2>
             <p>Dane trafiają wyłącznie do dostawców usług, z których korzystam przy prowadzeniu strony i korespondencji:</p>
             <ul>
               <li>Vercel Inc. (hosting strony),</li>
@@ -59,7 +75,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-3">
-            <h2>4. Jak długo przechowuję dane</h2>
+            <h2>5. Jak długo przechowuję dane</h2>
             <p>
               Dane z zapytań przechowuję do 12 miesięcy od ostatniego kontaktu, chyba że dojdzie do współpracy. Wtedy
               przez czas trwania umowy i okres wymagany przepisami podatkowymi.
@@ -67,7 +83,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-3">
-            <h2>5. Twoje prawa</h2>
+            <h2>6. Twoje prawa</h2>
             <p>Masz prawo do:</p>
             <ul>
               <li>dostępu do swoich danych i otrzymania ich kopii,</li>
@@ -79,7 +95,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-3">
-            <h2>6. Pliki cookies i analityka</h2>
+            <h2>7. Pliki cookies i analityka</h2>
             <p>
               Strona nie używa cookies reklamowych ani śledzących. Do statystyk odwiedzin używam Vercel Web Analytics,
               które działa bez plików cookies i nie identyfikuje pojedynczych osób. Zbiera tylko zanonimizowane dane:
@@ -93,7 +109,7 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-3">
-            <h2>7. Zmiany polityki</h2>
+            <h2>8. Zmiany polityki</h2>
             <p>Jeśli zmienię sposób przetwarzania danych, zaktualizuję ten dokument i datę na górze strony.</p>
           </section>
         </div>
