@@ -16,6 +16,7 @@ export const site = {
   region: "Dolny Śląsk",
   linkedin: "https://www.linkedin.com/in/%C5%82ukasz-dawidowicz-698a59b6/",
   github: "https://github.com/shivetay",
+  googleReview: "https://g.page/r/CeYqvpT75LZBECE/review", // link do wystawienia opinii w Google
   company: {
     legalName: "FSP Łukasz Dawidowicz",
     lines: ["NIP: 6922391957", "REGON: 52477552800000"],

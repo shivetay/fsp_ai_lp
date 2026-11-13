@@ -17,6 +17,11 @@ export function Footer() {
             <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">LinkedIn</a>
             <a href={site.github} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">GitHub</a>
           </div>
+          {site.googleReview && (
+            <a href={site.googleReview} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">
+              ★ Wystaw opinię w Google
+            </a>
+          )}
           <div className="flex gap-4">
             <a href="/uslugi" className="hover:text-foreground">Usługi</a>
             <a href="/branze" className="hover:text-foreground">Branże</a>
